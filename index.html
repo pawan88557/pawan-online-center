@@ -3,251 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center - Digital & CSC Services</title>
+    <title>Digital Service Portal - Dashboard</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-100 font-sans">
 
-    <!-- Top Header / Announcement Bar -->
+    <!-- Top Navigation Bar -->
     <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-3 mb-2 md:mb-0">
-                <div class="bg-white text-blue-700 p-2 rounded-full font-bold text-xl shadow">
-                    <i class="fa-solid fa-laptop-code"></i>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold tracking-wide">Pawan Online Center</h1>
-                    <p class="text-xs text-blue-200">SBI CSP & Digital Services | जफरगंज, फतेहपुर (उ.प्र.)</p>
-                </div>
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-globe text-2xl"></i>
+                <span class="text-xl font-bold tracking-wide">Digital Portal</span>
             </div>
-            <!-- Quick Contact Buttons -->
-            <div class="flex space-x-3">
-                <a href="tel:91XXXXXXXXXX" class="bg-green-600 hover:bg-green-700 text-white px-3 py-1.5 rounded-lg text-sm font-medium flex items-center shadow transition">
-                    <i class="fa-solid fa-phone mr-1.5"></i> Call Now
-                </a>
-                <a href="https://wa.me/91XXXXXXXXXX?text=नमस्ते%20पवन%20जी,%20मुझे%20ऑनलाइन%20सेवा%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium flex items-center shadow transition">
-                    <i class="fa-brands fa-whatsapp mr-1.5 text-lg"></i> WhatsApp
-                </a>
+            <div class="flex items-center space-x-4">
+                <!-- Wallet Balance Box -->
+                <div class="bg-blue-800 px-4 py-1.5 rounded-lg border border-blue-600 flex items-center space-x-2">
+                    <i class="fa-solid fa-wallet text-yellow-400"></i>
+                    <div>
+                        <p class="text-xs text-blue-200">Wallet Balance</p>
+                        <p class="font-bold text-sm">₹ 2,450.00</p>
+                    </div>
+                    <button class="bg-yellow-500 text-blue-950 px-2 py-0.5 rounded text-xs font-bold hover:bg-yellow-400 ml-2">+</button>
+                </div>
+                <!-- User Profile -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center font-bold border border-blue-400">
+                        PK
+                    </div>
+                    <span class="hidden md:inline font-medium text-sm">Pawan Kumar</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Search & Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-8 px-4 text-center">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold mb-3">डिजिटल सेवा पोर्टल - सभी काम एक ही जगह</h2>
-            <p class="text-blue-100 text-sm md:text-base mb-6">आधार, पैन, वोटर कार्ड, ड्राइविंग लाइसेंस, आय-जाति प्रमाण पत्र और बैंकिंग सेवाएँ खोजें।</p>
-            
-            <!-- Search Bar -->
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </span>
-                <input type="text" id="searchBox" onkeyup="filterServices()" placeholder="यहाँ सेवा का नाम लिखें (जैसे: PAN, Voter, Ayushman, Bank)..." 
-                    class="w-full pl-12 pr-4 py-3.5 rounded-xl text-gray-800 bg-white shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm md:text-base">
-            </div>
-        </div>
-    </section>
-
     <!-- Main Container -->
-    <main class="container mx-auto px-4 py-8">
+    <div class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-6">
 
-        <!-- Category Section -->
-        <div id="servicesContainer">
-
-            <!-- 1. Banking & CSP Services -->
-            <div class="service-category mb-8" data-category="banking csp sbi money">
-                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
-                    <i class="fa-solid fa-building-columns mr-2 text-blue-600"></i> SBI CSP & बैंकिंग सेवाएँ
-                </h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    <a href="https://retail.onlinesbi.sbi/retail/login.htm" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-blue-600 mb-2"><i class="fa-solid fa-piggy-bank"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">SBI खाता संबंधित</h4>
-                        <p class="text-xs text-gray-500">बैलेंस, मिनी स्टेटमेंट</p>
-                    </a>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-green-600 mb-2"><i class="fa-solid fa-money-bill-transfer"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Aadhaar Pay / AEPS</h4>
-                        <p class="text-xs text-gray-500">नकद निकासी व जमा</p>
-                    </div>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-amber-600 mb-2"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Money Transfer</h4>
-                        <p class="text-xs text-gray-500">किसी भी बैंक में भेजें पैसे</p>
-                    </div>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-indigo-600 mb-2"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Bill Payment</h4>
-                        <p class="text-xs text-gray-500">बिजली, पानी, मोबाइल रिचार्ज</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. Govt IDs & Aadhaar / PAN -->
-            <div class="service-category mb-8" data-category="aadhaar pan voter id">
-                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
-                    <i class="fa-solid fa-id-card mr-2 text-blue-600"></i> आधार, पैन और पहचान पत्र सेवाएँ
-                </h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-blue-500 mb-2"><i class="fa-solid fa-fingerprint"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Aadhaar Services</h4>
-                        <p class="text-xs text-gray-500">डाउनलोड, एड्रेस अपडेट</p>
-                    </a>
-                    <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-orange-500 mb-2"><i class="fa-solid fa-address-card"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">PAN Card Apply</h4>
-                        <p class="text-xs text-gray-500">नया पैन कार्ड व सुधार</p>
-                    </a>
-                    <a href="https://voters.eci.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-blue-800 mb-2"><i class="fa-solid fa-check-to-slot"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Voter ID (ECI)</h4>
-                        <p class="text-xs text-gray-500">नया वोटर कार्ड, करेक्शन</p>
-                    </a>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-purple-600 mb-2"><i class="fa-solid fa-print"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">PVC Card Print</h4>
-                        <p class="text-xs text-gray-500">पॉलीकार्बोनेट प्लास्टिक कार्ड</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. Transport & Vehicle Services -->
-            <div class="service-category mb-8" data-category="dl rc transport vehicle driving licence">
-                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
-                    <i class="fa-solid fa-car mr-2 text-blue-600"></i> ड्राइविंग लाइसेंस & वाहन (RTO) सेवाएँ
-                </h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    <a href="https://sarathi.parivahan.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-indigo-500 mb-2"><i class="fa-solid fa-id-badge"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Driving Licence (DL)</h4>
-                        <p class="text-xs text-gray-500">नया लर्निंग / डीएल आवेदन</p>
-                    </a>
-                    <a href="https://echallan.parivahan.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-red-500 mb-2"><i class="fa-solid fa-receipt"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">E-Challan Payment</h4>
-                        <p class="text-xs text-gray-500">वाहन चालान चेक व भुगतान</p>
-                    </a>
-                    <a href="https://vahan.parivahan.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-green-600 mb-2"><i class="fa-solid fa-truck-fast"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Vehicle RC Status</h4>
-                        <p class="text-xs text-gray-500">गाड़ी की जानकारी व फिटनेस</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 4. Welfare, Ration & Ayushman -->
-            <div class="service-category mb-8" data-category="ration ayushman eshram scholarship welfare">
-                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
-                    <i class="fa-solid fa-hands-holding-child mr-2 text-blue-600"></i> राशन कार्ड, आयुष्मान और सरकारी योजनाएँ
-                </h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    <a href="https://fcs.up.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-yellow-600 mb-2"><i class="fa-solid fa-bowl-food"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Ration Card (UP)</h4>
-                        <p class="text-xs text-gray-500">राशन पात्रता सूची व यूनिट</p>
-                    </a>
-                    <a href="https://beneficiary.nha.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-blue-600 mb-2"><i class="fa-solid fa-hospital-user"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Ayushman Card</h4>
-                        <p class="text-xs text-gray-500">5 लाख तक मुफ्त इलाज कार्ड</p>
-                    </a>
-                    <a href="https://scholarship.up.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-emerald-600 mb-2"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">UP Scholarship</h4>
-                        <p class="text-xs text-gray-500">छात्रवृत्ति आवेदन व स्टेटस</p>
-                    </a>
-                    <a href="https://eshram.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-cyan-600 mb-2"><i class="fa-solid fa-user-gear"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">E-Shram Card</h4>
-                        <p class="text-xs text-gray-500">असंगत क्षेत्र श्रमिक कार्ड</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 5. e-District & Print Services -->
-            <div class="service-category mb-8" data-category="edistrict income caste domicile print photo scan">
-                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
-                    <i class="fa-solid fa-file-shield mr-2 text-blue-600"></i> ई-डिस्ट्रिक्ट और प्रिंटिंग/स्कैनिंग सेवाएँ
-                </h3>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    <a href="https://edistrict.up.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
-                        <div class="text-3xl text-indigo-700 mb-2"><i class="fa-solid fa-certificate"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Income/Caste/Domicile</h4>
-                        <p class="text-xs text-gray-500">प्रमाण पत्र सत्यापन व आवेदन</p>
-                    </a>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-pink-600 mb-2"><i class="fa-solid fa-print"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Color Print / Lamination</h4>
-                        <p class="text-xs text-gray-500">हाई-क्वालिटी प्रिंटिंग सेवा</p>
-                    </div>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-teal-600 mb-2"><i class="fa-solid fa-camera"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Passport Size Photo</h4>
-                        <p class="text-xs text-gray-500">तत्काल फोटो प्रिंट</p>
-                    </div>
-                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
-                        <div class="text-3xl text-blue-500 mb-2"><i class="fa-solid fa-file-pdf"></i></div>
-                        <h4 class="font-semibold text-sm mb-1">Document Scan & PDF</h4>
-                        <p class="text-xs text-gray-500">मेल और व्हाट्सएप शेयरिंग</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 mt-12 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-lg font-bold mb-2">Pawan Online Center</h3>
-            <p class="text-sm text-gray-400 mb-4">पता: जफरगंज, फतेहपुर, उत्तर प्रदेश | सभी प्रकार के ऑनलाइन फॉर्म व बैंकिंग कार्य हेतु पधारें।</p>
-            <div class="flex justify-center space-x-4 mb-4">
-                <a href="tel:917052724014" class="bg-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-                    <i class="fa-solid fa-phone mr-2"></i>कॉल करें
+        <!-- Sidebar Navigation -->
+        <aside class="bg-white rounded-xl shadow-sm p-4 h-fit md:col-span-1">
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center space-x-3 bg-blue-50 text-blue-700 px-4 py-2.5 rounded-lg font-medium text-sm">
+                    <i class="fa-solid fa-house-chimney w-5"></i>
+                    <span>Dashboard</span>
                 </a>
-                <a href="https://wa.me/917052724014" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition">
-                    <i class="fa-brands fa-whatsapp mr-2"></i>व्हाट्सएप मैसेज
+                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
+                    <i class="fa-solid fa-id-card w-5 text-blue-600"></i>
+                    <span>PAN Card Services</span>
                 </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
+                    <i class="fa-solid fa-fingerprint w-5 text-green-600"></i>
+                    <span>AEPS & Banking</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
+                    <i class="fa-solid fa-mobile-screen w-5 text-purple-600"></i>
+                    <span>Recharge & Bill Pay</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
+                    <i class="fa-solid fa-print w-5 text-orange-600"></i>
+                    <span>Print & PVC Services</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
+                    <i class="fa-solid fa-clock-rotate-left w-5 text-gray-500"></i>
+                    <span>Transaction History</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 text-red-600 hover:bg-red-50 px-4 py-2.5 rounded-lg font-medium text-sm transition mt-6">
+                    <i class="fa-solid fa-right-from-bracket w-5"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="md:col-span-3 space-y-6">
+
+            <!-- Welcome Banner -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md flex justify-between items-center">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold">Welcome back, Pawan!</h1>
+                    <p class="text-blue-100 text-sm mt-1">Aapka digital service portal active aur ready hai.</p>
+                </div>
+                <div class="hidden sm:block">
+                    <span class="bg-green-500 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow">Status: Online</span>
+                </div>
             </div>
-            <p class="text-xs text-gray-500">&copy; 2026 Pawan Online Center. All Rights Reserved.</p>
-        </div>
-    </footer>
 
-    <!-- Search Filter Script -->
-    <script>
-        function filterServices() {
-            let input = document.getElementById('searchBox').value.toLowerCase();
-            let categories = document.querySelectorAll('.service-category');
+            <!-- Quick Services Section -->
+            <div>
+                <h2 class="text-lg font-bold text-gray-800 mb-4">Quick Services</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <!-- Service 1 -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800">PAN Card</h3>
+                        <p class="text-xs text-gray-500 mt-1">Instant & UTI/NSDL</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                        <div class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
+                            <i class="fa-solid fa-fingerprint"></i>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800">AEPS Cash Withdrawal</h3>
+                        <p class="text-xs text-gray-500 mt-1">Biometric Balance Check</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                        <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800">Mobile Recharge</h3>
+                        <p class="text-xs text-gray-500 mt-1">Prepaid & DTH</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                        <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800">PVC Card Print</h3>
+                        <p class="text-xs text-gray-500 mt-1">ID Card Cropping</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800">Utility Bill Pay</h3>
+                        <p class="text-xs text-gray-500 mt-1">Electricity, Water, Gas</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                        <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800">Money Transfer</h3>
+                        <p class="text-xs text-gray-500 mt-1">DMT Instant Transfer</p>
+                    </div>
+                </div>
+            </div>
 
-            categories.forEach(category => {
-                let keywords = category.getAttribute('data-category').toLowerCase();
-                let cards = category.querySelectorAll('.service-card');
-                let categoryMatch = keywords.includes(input);
-                let hasVisibleCard = false;
+            <!-- Recent Transactions Table -->
+            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-gray-800 text-sm md:text-base">Recent Transactions</h3>
+                    <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">View All</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-gray-50 text-gray-600 text-xs uppercase">
+                            <tr>
+                                <th class="p-3 rounded-l-lg">Txn ID</th>
+                                <th class="p-3">Service</th>
+                                <th class="p-3">Details</th>
+                                <th class="p-3">Amount</th>
+                                <th class="p-3 rounded-r-lg">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr>
+                                <td class="p-3 font-mono text-xs">TXN984210</td>
+                                <td class="p-3 font-medium">Mobile Recharge</td>
+                                <td class="p-3 text-xs text-gray-500">Airtel • 9839XXXXXX</td>
+                                <td class="p-3 font-semibold">₹ 299.00</td>
+                                <td class="p-3"><span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-full font-medium">Success</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-mono text-xs">TXN984209</td>
+                                <td class="p-3 font-medium">PAN Card Application</td>
+                                <td class="p-3 text-xs text-gray-500">NSDL e-KYC</td>
+                                <td class="p-3 font-semibold">₹ 107.00</td>
+                                <td class="p-3"><span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-full font-medium">Success</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-mono text-xs">TXN984208</td>
+                                <td class="p-3 font-medium">AEPS Withdrawal</td>
+                                <td class="p-3 text-xs text-gray-500">State Bank of India</td>
+                                <td class="p-3 font-semibold">₹ 2,000.00</td>
+                                <td class="p-3"><span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-full font-medium">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                cards.forEach(card => {
-                    let text = card.innerText.toLowerCase();
-                    if (text.includes(input) || categoryMatch) {
-                        card.style.display = "flex";
-                        hasVisibleCard = true;
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
+        </main>
 
-                if (hasVisibleCard || input === "") {
-                    category.style.display = "block";
-                } else {
-                    category.style.display = "none";
-                }
-            });
-        }
-    </script>
+    </div>
+
 </body>
 </html>
