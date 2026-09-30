@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center - Portal</title>
+    <title>Pawan Online Center - Dashboard</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -18,416 +18,310 @@
         }
 
         body {
-            background: linear-gradient(135deg, #667eea, #764ba2, #ff758c, #ff7eb3);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
-            min-height: 100vh;
+            background-color: #f4f6f9;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            width: 100%;
-            max-width: 500px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            height: 100vh;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
-        .form-header {
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        /* Sidebar Styles */
+        .sidebar {
+            width: 260px;
+            background-color: #1e293b;
+            color: #cbd5e1;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .sidebar-brand {
+            padding: 20px;
+            background: #0f172a;
             color: white;
-            padding: 22px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .sidebar-brand i {
+            color: #38bdf8;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 15px 10px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .sidebar-menu::-webkit-scrollbar {
+            width: 5px;
+        }
+        .sidebar-menu::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 5px;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .sidebar-menu a i {
+            font-size: 16px;
+            width: 20px;
             text-align: center;
         }
 
-        .form-header h2 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 3px;
-        }
-
-        .form-header p {
-            font-size: 12px;
-            opacity: 0.9;
-            background: rgba(0, 0, 0, 0.15);
-            padding: 3px 10px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 5px;
-        }
-
-        .tab-buttons {
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
             display: flex;
-            background: #f0f2f5;
-            padding: 6px;
-            margin: 15px 20px 0 20px;
-            border-radius: 12px;
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: #666;
-            border-radius: 8px;
-        }
-
-        .tab-btn.active {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
-        }
-
-        .form-body {
-            padding: 20px 25px 25px 25px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: #444;
-            font-size: 13px;
-        }
-
-        .input-box {
+            flex-direction: column;
+            overflow: hidden;
             position: relative;
         }
 
-        .input-box i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #764ba2;
-            font-size: 15px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 11px 15px 11px 42px;
-            border: 2px solid #e1e1e1;
-            border-radius: 10px;
-            font-size: 14px;
-            transition: all 0.3s;
-            background: #fafafa;
-        }
-
-        .form-group input:focus {
-            border-color: #667eea;
-            background: #fff;
-            outline: none;
-            box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border: none;
-            color: white;
-            font-size: 15px;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-            margin-top: 5px;
-        }
-
-        .submit-btn:hover {
-            background: linear-gradient(135deg, #5a6fd6, #683d94);
-            transform: translateY(-2px);
-        }
-
-        .form-section {
-            display: none;
-        }
-
-        .form-section.active {
-            display: block;
-        }
-
-        /* Dashboard Styles */
-        #dashboard-section {
-            display: none;
-            padding: 20px;
-        }
-
-        .dashboard-header {
+        /* Top Navbar */
+        .top-navbar {
+            height: 70px;
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 8px;
+            padding: 0 25px;
         }
 
-        .dashboard-header h3 {
-            color: #333;
-            font-size: 16px;
-        }
-
-        .logout-btn {
-            background: #ff416c;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 12px;
+        .user-welcome {
+            font-size: 15px;
             font-weight: 600;
+            color: #334155;
         }
 
-        .service-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            max-height: 310px;
+        .top-badges {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .badge-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .badge-speed {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+        }
+
+        .badge-wallet {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        /* Dashboard Body */
+        .dashboard-body {
+            flex-grow: 1;
+            padding: 25px;
             overflow-y: auto;
-            padding-right: 4px;
+            background: #f8fafc;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
         }
 
         .service-card {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border: 1px solid #dcdcdc;
-            padding: 12px 10px;
-            border-radius: 10px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
             text-align: center;
-            font-size: 12px;
-            font-weight: 600;
-            color: #333;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .service-card:hover {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+
+        .service-card i {
+            font-size: 28px;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+
+        .service-card h4 {
+            font-size: 14px;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
             color: white;
-            transform: translateY(-2px);
-            border-color: transparent;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            padding: 10px 18px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s;
+            z-index: 1000;
         }
 
-        .alert-msg {
-            padding: 8px;
-            margin-bottom: 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            text-align: center;
-            display: none;
+        .whatsapp-float:hover {
+            transform: scale(1.05);
         }
 
-        .alert-success { background: #d4edda; color: #155724; }
-        .alert-error { background: #f8d7da; color: #721c24; }
+        .whatsapp-float i {
+            font-size: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+            }
+            .sidebar-brand span, .sidebar-menu span {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Auth View -->
-        <div id="auth-view">
-            <div class="form-header">
-                <h2>Pawan Online Center</h2>
-                <p><i class="fa-solid fa-bolt"></i> All India Online Service Available</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>PRINT PORTAL</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active"><i class="fa-solid fa-house"></i> <span>डैशबोर्ड (Dashboard)</span></a></li>
+            <li><a href="#" onclick="openService('ड्राइविंग लाइसेंस PDF')"><i class="fa-solid fa-id-card"></i> <span>ड्राइविंग लाइसेंस PDF</span></a></li>
+            <li><a href="#" onclick="openService('वोटर कार्ड ओरिजिनल')"><i class="fa-solid fa-address-card"></i> <span>वोटर कार्ड ओरिजिनल</span></a></li>
+            <li><a href="#" onclick="openService('राशन कार्ड PDF')"><i class="fa-solid fa-file-lines"></i> <span>राशन कार्ड PDF</span></a></li>
+            <li><a href="#" onclick="openService('आयुष्मान कार्ड सर्विस')"><i class="fa-solid fa-briefcase-medical"></i> <span>आयुष्मान सर्विस</span></a></li>
+            <li><a href="#" onclick="openService('गाड़ी RC PDF')"><i class="fa-solid fa-car"></i> <span>गाड़ियों की RC PDF</span></a></li>
+            <li><a href="#" onclick="openService('पैन कार्ड अप्लाई')"><i class="fa-solid fa-id-badge"></i> <span>पैन कार्ड अप्लाई</span></a></li>
+            <li><a href="#" onclick="openService('वैक्सीन सर्टिफिकेट')"><i class="fa-solid fa-syringe"></i> <span>वैक्सीन सर्टिफिकेट</span></a></li>
+            <li><a href="#" onclick="handleLogout()" style="color: #ef4444;"><i class="fa-solid fa-power-off"></i> <span>लॉग आउट</span></a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navbar -->
+        <div class="top-navbar">
+            <div class="user-welcome">
+                Hello, स्वागत है Pawan Online Center में!
             </div>
-
-            <!-- Tabs -->
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="switchTab('login')">लॉगिन (Login)</button>
-                <button class="tab-btn" onclick="switchTab('register')">रजिस्टर (Register)</button>
-            </div>
-
-            <div class="form-body">
-                <div id="alert-box" class="alert-msg"></div>
-
-                <!-- Login Form -->
-                <form id="login-form" class="form-section active" onsubmit="handleLogin(event)">
-                    <div class="form-group">
-                        <label>मोबाइल नंबर</label>
-                        <div class="input-box">
-                            <i class="fa-solid fa-phone"></i>
-                            <input type="tel" id="login-phone" placeholder="रजिस्टर्ड नंबर दर्ज करें" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>पासवर्ड</label>
-                        <div class="input-box">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="login-pass" placeholder="पासवर्ड दर्ज करें" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="submit-btn"><i class="fa-solid fa-right-to-bracket"></i> लॉगिन करें</button>
-                </form>
-
-                <!-- Register Form -->
-                <form id="register-form" class="form-section" onsubmit="handleRegister(event)">
-                    <div class="form-group">
-                        <label>पूरा नाम</label>
-                        <div class="input-box">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="reg-name" placeholder="अपना पूरा नाम दर्ज करें" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>मोबाइल नंबर (WhatsApp)</label>
-                        <div class="input-box">
-                            <i class="fa-solid fa-phone"></i>
-                            <input type="tel" id="reg-phone" placeholder="10 अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>पासवर्ड बनाएं</label>
-                        <div class="input-box">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" id="reg-pass" placeholder="नया पासवर्ड बनाएं" required>
-                        </div>
-                    </div>
-                    <button type="submit" class="submit-btn"><i class="fa-solid fa-user-plus"></i> रजिस्टर करें</button>
-                </form>
-
-                <div style="text-align: center; margin-top: 12px; font-size: 12px; color: #666;">
-                    Contact Admin: <b>7052724014</b>
+            <div class="top-badges">
+                <div class="badge-box badge-speed">
+                    <i class="fa-solid fa-bolt"></i> 5G SPEED
+                </div>
+                <div class="badge-box badge-wallet">
+                    <i class="fa-solid fa-wallet"></i> Wallet: ₹205
                 </div>
             </div>
         </div>
 
-        <!-- Dashboard View (After Login) -->
-        <div id="dashboard-section">
-            <div class="dashboard-header">
-                <h3 id="welcome-user">स्वागत है!</h3>
-                <button class="logout-btn" onclick="handleLogout()"><i class="fa-solid fa-power-off"></i> लॉग आउट</button>
-            </div>
-            <p style="font-size: 12px; color: #555; margin-bottom: 10px;">किसी भी सर्विस पर क्लिक करें, सीधा WhatsApp पर एडमिन से जुड़ें:</p>
+        <!-- Dashboard Body / Services Grid -->
+        <div class="dashboard-body">
+            <p style="margin-bottom: 15px; font-size: 13px; color: #64748b; font-weight: 500;">उपलब्ध ऑनलाइन सेवाएं (किसी पर भी क्लिक करके सीधे WhatsApp पर आर्डर भेजें):</p>
             
-            <div class="service-grid">
-                <div class="service-card" onclick="openService('ड्राइविंग लाइसेंस PDF')">🚗 ड्राइविंग लाइसेंस PDF</div>
-                <div class="service-card" onclick="openService('वोटर कार्ड ओरिजिनल')">🆔 वोटर कार्ड ओरिजिनल</div>
-                <div class="service-card" onclick="openService('राशन कार्ड PDF')">📜 राशन कार्ड PDF</div>
-                <div class="service-card" onclick="openService('आयुष्मान कार्ड सर्विस')">🏥 आयुष्मान कार्ड सर्विस</div>
-                <div class="service-card" onclick="openService('गाड़ी RC PDF')">🚙 गाड़ी RC PDF</div>
-                <div class="service-card" onclick="openService('पैन कार्ड अप्लाई')">📝 पैन कार्ड अप्लाई</div>
-                <div class="service-card" onclick="openService('वैक्सीन सर्टिफिकेट')">💉 वैक्सीन सर्टिफिकेट</div>
-                <div class="service-card" onclick="openService('5G स्पीड ऑल वर्क')">⚡ 5G स्पीड ऑल वर्क</div>
+            <div class="services-grid">
+                <div class="service-card" onclick="openService('ड्राइविंग लाइसेंस अप्लाई')">
+                    <i class="fa-solid fa-id-card"></i>
+                    <h4>ड्राइविंग लाइसेंस अप्लाई</h4>
+                </div>
+                <div class="service-card" onclick="openService('वोटर कार्ड ओरिजिनल PDF')">
+                    <i class="fa-solid fa-address-card"></i>
+                    <h4>वोटर कार्ड ओरिजिनल PDF</h4>
+                </div>
+                <div class="service-card" onclick="openService('राशन कार्ड की पीडीऍफ')">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <h4>राशन कार्ड की पीडीऍफ</h4>
+                </div>
+                <div class="service-card" onclick="openService('आधार से पैन नंबर')">
+                    <i class="fa-solid fa-fingerprint"></i>
+                    <h4>आधार से पैन नंबर</h4>
+                </div>
+                <div class="service-card" onclick="openService('आयुष्मान पेंडिंग एप्रूव')">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <h4>आयुष्मान पेंडिंग एप्रूव</h4>
+                </div>
+                <div class="service-card" onclick="openService('गाड़ियों की RC PDF')">
+                    <i class="fa-solid fa-car-side"></i>
+                    <h4>गाड़ियों की RC PDF</h4>
+                </div>
+                <div class="service-card" onclick="openService('पैन कार्ड अप्लाई')">
+                    <i class="fa-solid fa-id-badge"></i>
+                    <h4>पैन कार्ड अप्लाई</h4>
+                </div>
+                <div class="service-card" onclick="openService('बाइक इन्सुरेंस / प्रदूषण')">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>बाइक इन्सुरेंस / प्रदूषण</h4>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- WhatsApp Support Floating Button -->
+    <a href="https://wa.me/917052724014?text=Hello%20Admin,%20mujhe%20portal%20service%20ke%20liye%20baat%20karni%20hai." target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i> Whatsapp Support
+    </a>
+
     <script>
-        function showAlert(message, type) {
-            const alertBox = document.getElementById('alert-box');
-            alertBox.innerText = message;
-            alertBox.className = `alert-msg ${type === 'success' ? 'alert-success' : 'alert-error'}`;
-            alertBox.style.display = 'block';
-            setTimeout(() => { alertBox.style.display = 'none'; }, 4000);
-        }
-
-        function switchTab(tabName) {
-            const loginForm = document.getElementById('login-form');
-            const registerForm = document.getElementById('register-form');
-            const buttons = document.querySelectorAll('.tab-btn');
-
-            buttons.forEach(btn => btn.classList.remove('active'));
-
-            if (tabName === 'login') {
-                loginForm.classList.add('active');
-                registerForm.classList.remove('active');
-                buttons[0].classList.add('active');
-            } else {
-                loginForm.classList.remove('active');
-                registerForm.classList.add('active');
-                buttons[1].classList.add('active');
-            }
-        }
-
-        // Register Function
-        function handleRegister(event) {
-            event.preventDefault();
-            const name = document.getElementById('reg-name').value;
-            const phone = document.getElementById('reg-phone').value;
-            const pass = document.getElementById('reg-pass').value;
-
-            let users = JSON.parse(localStorage.getItem('pawan_users')) || [];
-
-            const existingUser = users.find(u => u.phone === phone);
-            if (existingUser) {
-                showAlert('यह मोबाइल नंबर पहले से रजिस्टर्ड है!', 'error');
-                return;
-            }
-
-            users.push({ name, phone, pass });
-            localStorage.setItem('pawan_users', JSON.stringify(users));
-
-            showAlert('रजिस्ट्रेशन सफल रहा! अब लॉगिन करें।', 'success');
-            document.getElementById('register-form').reset();
-            switchTab('login');
-        }
-
-        // Login Function
-        function handleLogin(event) {
-            event.preventDefault();
-            const phone = document.getElementById('login-phone').value;
-            const pass = document.getElementById('login-pass').value;
-
-            let users = JSON.parse(localStorage.getItem('pawan_users')) || [];
-            const user = users.find(u => u.phone === phone && u.pass === pass);
-
-            if (user) {
-                localStorage.setItem('logged_in_user', JSON.stringify(user));
-                showDashboard(user.name);
-            } else {
-                showAlert('गलत मोबाइल नंबर या पासवर्ड!', 'error');
-            }
-        }
-
-        function showDashboard(name) {
-            document.getElementById('auth-view').style.display = 'none';
-            document.getElementById('dashboard-section').style.display = 'block';
-            document.getElementById('welcome-user').innerText = `स्वागत है, ${name}!`;
-        }
-
-        function handleLogout() {
-            localStorage.removeItem('logged_in_user');
-            document.getElementById('dashboard-section').style.display = 'none';
-            document.getElementById('auth-view').style.display = 'block';
-            document.getElementById('login-form').reset();
-            switchTab('login');
-        }
-
-        // Service Click Function - Connects directly to WhatsApp
         function openService(serviceName) {
             const adminNumber = "917052724014";
-            const message = `Hello Admin, mujhe "${serviceName}" ka kaam karwana hai. Please help!`;
+            const message = `Hello Admin, mujhe "${serviceName}" ka kaam karwana hai. Details bhej raha hu.`;
             const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
 
-        window.onload = function() {
-            const loggedInUser = JSON.parse(localStorage.getItem('logged_in_user'));
-            if (loggedInUser) {
-                showDashboard(loggedInUser.name);
+        function handleLogout() {
+            if(confirm('क्या आप लॉग आउट करना चाहते हैं?')) {
+                alert('सफलतापूर्वक लॉग आउट हो गए!');
             }
         }
     </script>
