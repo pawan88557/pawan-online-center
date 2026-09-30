@@ -3,194 +3,587 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Service Portal - Dashboard</title>
+    <title>Digital Service Portal - Fully Functional</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100 font-sans antialiased">
 
-    <!-- Top Navigation Bar -->
-    <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-globe text-2xl"></i>
-                <span class="text-xl font-bold tracking-wide">Digital Portal</span>
-            </div>
-            <div class="flex items-center space-x-4">
-                <!-- Wallet Balance Box -->
-                <div class="bg-blue-800 px-4 py-1.5 rounded-lg border border-blue-600 flex items-center space-x-2">
-                    <i class="fa-solid fa-wallet text-yellow-400"></i>
-                    <div>
-                        <p class="text-xs text-blue-200">Wallet Balance</p>
-                        <p class="font-bold text-sm">₹ 2,450.00</p>
-                    </div>
-                    <button class="bg-yellow-500 text-blue-950 px-2 py-0.5 rounded text-xs font-bold hover:bg-yellow-400 ml-2">+</button>
-                </div>
-                <!-- User Profile -->
-                <div class="flex items-center space-x-2">
-                    <div class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center font-bold border border-blue-400">
-                        PK
-                    </div>
-                    <span class="hidden md:inline font-medium text-sm">Pawan Kumar</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <div class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-6">
-
-        <!-- Sidebar Navigation -->
-        <aside class="bg-white rounded-xl shadow-sm p-4 h-fit md:col-span-1">
-            <nav class="space-y-1">
-                <a href="#" class="flex items-center space-x-3 bg-blue-50 text-blue-700 px-4 py-2.5 rounded-lg font-medium text-sm">
-                    <i class="fa-solid fa-house-chimney w-5"></i>
-                    <span>Dashboard</span>
-                </a>
-                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
-                    <i class="fa-solid fa-id-card w-5 text-blue-600"></i>
-                    <span>PAN Card Services</span>
-                </a>
-                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
-                    <i class="fa-solid fa-fingerprint w-5 text-green-600"></i>
-                    <span>AEPS & Banking</span>
-                </a>
-                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
-                    <i class="fa-solid fa-mobile-screen w-5 text-purple-600"></i>
-                    <span>Recharge & Bill Pay</span>
-                </a>
-                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
-                    <i class="fa-solid fa-print w-5 text-orange-600"></i>
-                    <span>Print & PVC Services</span>
-                </a>
-                <a href="#" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-2.5 rounded-lg font-medium text-sm transition">
-                    <i class="fa-solid fa-clock-rotate-left w-5 text-gray-500"></i>
-                    <span>Transaction History</span>
-                </a>
-                <a href="#" class="flex items-center space-x-3 text-red-600 hover:bg-red-50 px-4 py-2.5 rounded-lg font-medium text-sm transition mt-6">
-                    <i class="fa-solid fa-right-from-bracket w-5"></i>
-                    <span>Logout</span>
-                </a>
-            </nav>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="md:col-span-3 space-y-6">
-
-            <!-- Welcome Banner -->
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md flex justify-between items-center">
-                <div>
-                    <h1 class="text-xl md:text-2xl font-bold">Welcome back, Pawan!</h1>
-                    <p class="text-blue-100 text-sm mt-1">Aapka digital service portal active aur ready hai.</p>
-                </div>
-                <div class="hidden sm:block">
-                    <span class="bg-green-500 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow">Status: Online</span>
-                </div>
-            </div>
-
-            <!-- Quick Services Section -->
-            <div>
-                <h2 class="text-lg font-bold text-gray-800 mb-4">Quick Services</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    <!-- Service 1 -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
-                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-id-card"></i>
-                        </div>
-                        <h3 class="font-semibold text-sm text-gray-800">PAN Card</h3>
-                        <p class="text-xs text-gray-500 mt-1">Instant & UTI/NSDL</p>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
-                        <div class="w-12 h-12 bg-green-50 text-green-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-fingerprint"></i>
-                        </div>
-                        <h3 class="font-semibold text-sm text-gray-800">AEPS Cash Withdrawal</h3>
-                        <p class="text-xs text-gray-500 mt-1">Biometric Balance Check</p>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
-                        <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                        </div>
-                        <h3 class="font-semibold text-sm text-gray-800">Mobile Recharge</h3>
-                        <p class="text-xs text-gray-500 mt-1">Prepaid & DTH</p>
-                    </div>
-                    <!-- Service 4 -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
-                        <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-print"></i>
-                        </div>
-                        <h3 class="font-semibold text-sm text-gray-800">PVC Card Print</h3>
-                        <p class="text-xs text-gray-500 mt-1">ID Card Cropping</p>
-                    </div>
-                    <!-- Service 5 -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
-                        <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-lightbulb"></i>
-                        </div>
-                        <h3 class="font-semibold text-sm text-gray-800">Utility Bill Pay</h3>
-                        <p class="text-xs text-gray-500 mt-1">Electricity, Water, Gas</p>
-                    </div>
-                    <!-- Service 6 -->
-                    <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
-                        <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mx-auto mb-3 text-xl">
-                            <i class="fa-solid fa-money-bill-transfer"></i>
-                        </div>
-                        <h3 class="font-semibold text-sm text-gray-800">Money Transfer</h3>
-                        <p class="text-xs text-gray-500 mt-1">DMT Instant Transfer</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recent Transactions Table -->
-            <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-100">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="font-bold text-gray-800 text-sm md:text-base">Recent Transactions</h3>
-                    <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">View All</a>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-sm">
-                        <thead class="bg-gray-50 text-gray-600 text-xs uppercase">
-                            <tr>
-                                <th class="p-3 rounded-l-lg">Txn ID</th>
-                                <th class="p-3">Service</th>
-                                <th class="p-3">Details</th>
-                                <th class="p-3">Amount</th>
-                                <th class="p-3 rounded-r-lg">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 text-gray-700">
-                            <tr>
-                                <td class="p-3 font-mono text-xs">TXN984210</td>
-                                <td class="p-3 font-medium">Mobile Recharge</td>
-                                <td class="p-3 text-xs text-gray-500">Airtel • 9839XXXXXX</td>
-                                <td class="p-3 font-semibold">₹ 299.00</td>
-                                <td class="p-3"><span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-full font-medium">Success</span></td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-mono text-xs">TXN984209</td>
-                                <td class="p-3 font-medium">PAN Card Application</td>
-                                <td class="p-3 text-xs text-gray-500">NSDL e-KYC</td>
-                                <td class="p-3 font-semibold">₹ 107.00</td>
-                                <td class="p-3"><span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-full font-medium">Success</span></td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-mono text-xs">TXN984208</td>
-                                <td class="p-3 font-medium">AEPS Withdrawal</td>
-                                <td class="p-3 text-xs text-gray-500">State Bank of India</td>
-                                <td class="p-3 font-semibold">₹ 2,000.00</td>
-                                <td class="p-3"><span class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-1 rounded-full font-medium">Pending</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </main>
-
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-5 right-5 z-50 hidden bg-gray-900 text-white px-4 py-3 rounded-xl shadow-lg transition-all duration-300 flex items-center space-x-2">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-green-400"></i>
+        <span id="toast-msg" class="text-sm font-medium">Success message</span>
     </div>
 
+    <!-- ================= AUTHENTICATION CONTAINER ================= -->
+    <div id="auth-container" class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-600 to-indigo-900">
+        <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl font-bold shadow-inner">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-800">Digital Portal</h1>
+                <p class="text-xs text-gray-500 mt-1">Apna Multi-Service Retailer Portal</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex bg-gray-100 p-1 rounded-xl mb-6">
+                <button id="tab-login-btn" onclick="switchAuthTab('login')" class="flex-1 py-2 text-sm font-semibold rounded-lg bg-white text-blue-600 shadow-sm transition">Login</button>
+                <button id="tab-register-btn" onclick="switchAuthTab('register')" class="flex-1 py-2 text-sm font-semibold rounded-lg text-gray-500 hover:text-gray-800 transition">Create Account</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Login ID / Mobile Number</label>
+                    <input type="text" id="login-id" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Enter mobile or ID">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Password</label>
+                    <input type="password" id="login-password" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Enter password">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow-md transition text-sm">Login to Dashboard</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" onsubmit="handleRegister(event)" class="space-y-4 hidden">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Full Name</label>
+                    <input type="text" id="reg-name" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Pawan Kumar">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Mobile Number (Login ID)</label>
+                    <input type="tel" id="reg-mobile" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="10-digit mobile number">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Create Password</label>
+                    <input type="password" id="reg-password" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Set secure password">
+                </div>
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl shadow-md transition text-sm">Register & Create Account</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN DASHBOARD CONTAINER ================= -->
+    <div id="dashboard-container" class="hidden min-h-screen flex flex-col">
+
+        <!-- Top Navigation Bar -->
+        <header class="bg-blue-700 text-white shadow-md sticky top-0 z-40">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-globe text-2xl"></i>
+                    <span class="text-xl font-bold tracking-wide">Digital Portal</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Wallet Balance Box -->
+                    <div class="bg-blue-800 px-4 py-1.5 rounded-xl border border-blue-600 flex items-center space-x-3">
+                        <i class="fa-solid fa-wallet text-yellow-400 text-lg"></i>
+                        <div>
+                            <p class="text-[10px] text-blue-200 uppercase tracking-wider">Wallet Balance</p>
+                            <p id="wallet-balance-display" class="font-bold text-sm">₹ 2,450.00</p>
+                        </div>
+                        <button onclick="openModal('add-money-modal')" class="bg-yellow-500 text-blue-950 px-2.5 py-1 rounded-lg text-xs font-bold hover:bg-yellow-400 transition ml-2 shadow">+</button>
+                    </div>
+                    <!-- User Profile -->
+                    <div class="flex items-center space-x-2">
+                        <div id="user-avatar" class="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center font-bold border border-blue-400 text-sm">
+                            PK
+                        </div>
+                        <span id="user-name-display" class="hidden md:inline font-medium text-sm">Pawan Kumar</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body Grid -->
+        <div class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-6 w-full flex-1">
+
+            <!-- Sidebar Navigation -->
+            <aside class="bg-white rounded-2xl shadow-sm p-4 h-fit md:col-span-1 border border-gray-100">
+                <nav class="space-y-1">
+                    <a href="#" class="flex items-center space-x-3 bg-blue-50 text-blue-700 px-4 py-3 rounded-xl font-medium text-sm">
+                        <i class="fa-solid fa-house-chimney w-5"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" onclick="openModal('service-pan-modal')" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-xl font-medium text-sm transition">
+                        <i class="fa-solid fa-id-card w-5 text-blue-600"></i>
+                        <span>PAN Card Services</span>
+                    </a>
+                    <a href="#" onclick="openModal('service-aeps-modal')" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-xl font-medium text-sm transition">
+                        <i class="fa-solid fa-fingerprint w-5 text-green-600"></i>
+                        <span>AEPS & Banking</span>
+                    </a>
+                    <a href="#" onclick="openModal('service-recharge-modal')" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-xl font-medium text-sm transition">
+                        <i class="fa-solid fa-mobile-screen w-5 text-purple-600"></i>
+                        <span>Mobile & DTH Recharge</span>
+                    </a>
+                    <a href="#" onclick="openModal('service-bill-modal')" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-xl font-medium text-sm transition">
+                        <i class="fa-solid fa-lightbulb w-5 text-orange-600"></i>
+                        <span>Utility Bill Pay</span>
+                    </a>
+                    <a href="#" onclick="openModal('service-dmt-modal')" class="flex items-center space-x-3 text-gray-700 hover:bg-gray-50 px-4 py-3 rounded-xl font-medium text-sm transition">
+                        <i class="fa-solid fa-money-bill-transfer w-5 text-teal-600"></i>
+                        <span>Money Transfer (DMT)</span>
+                    </a>
+                    <a href="#" onclick="handleLogout()" class="flex items-center space-x-3 text-red-600 hover:bg-red-50 px-4 py-3 rounded-xl font-medium text-sm transition mt-6">
+                        <i class="fa-solid fa-right-from-bracket w-5"></i>
+                        <span>Logout</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="md:col-span-3 space-y-6">
+
+                <!-- Welcome Banner -->
+                <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-md flex justify-between items-center">
+                    <div>
+                        <h1 id="welcome-title" class="text-xl md:text-2xl font-bold">Welcome back, Pawan!</h1>
+                        <p class="text-blue-100 text-sm mt-1">Aapka digital service portal active aur ready hai.</p>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="bg-green-500 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow">Status: Online</span>
+                    </div>
+                </div>
+
+                <!-- Quick Services Section -->
+                <div>
+                    <h2 class="text-lg font-bold text-gray-800 mb-4">Quick Services</h2>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <!-- Service 1 -->
+                        <div onclick="openModal('service-pan-modal')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                            <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl shadow-inner">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm text-gray-800">PAN Card</h3>
+                            <p class="text-xs text-gray-500 mt-1">Instant e-KYC</p>
+                        </div>
+                        <!-- Service 2 -->
+                        <div onclick="openModal('service-aeps-modal')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                            <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl shadow-inner">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm text-gray-800">AEPS Withdrawal</h3>
+                            <p class="text-xs text-gray-500 mt-1">Biometric Cash</p>
+                        </div>
+                        <!-- Service 3 -->
+                        <div onclick="openModal('service-recharge-modal')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                            <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl shadow-inner">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm text-gray-800">Mobile Recharge</h3>
+                            <p class="text-xs text-gray-500 mt-1">Prepaid & DTH</p>
+                        </div>
+                        <!-- Service 4 -->
+                        <div onclick="openModal('service-bill-modal')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                            <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl shadow-inner">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm text-gray-800">Utility Bill Pay</h3>
+                            <p class="text-xs text-gray-500 mt-1">Electricity & Gas</p>
+                        </div>
+                        <!-- Service 5 -->
+                        <div onclick="openModal('service-dmt-modal')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                            <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl shadow-inner">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm text-gray-800">Money Transfer</h3>
+                            <p class="text-xs text-gray-500 mt-1">DMT Instant</p>
+                        </div>
+                        <!-- Service 6 -->
+                        <div onclick="openModal('add-money-modal')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer border border-gray-100 text-center">
+                            <div class="w-12 h-12 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl shadow-inner">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm text-gray-800">Load Wallet</h3>
+                            <p class="text-xs text-gray-500 mt-1">UPI / QR Pay</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions Table -->
+                <div class="bg-white rounded-2xl shadow-sm p-5 border border-gray-100">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-gray-800 text-sm md:text-base">Recent Transactions</h3>
+                        <span class="text-blue-600 text-xs font-semibold cursor-pointer" onclick="renderTransactions()">Refresh</span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-gray-50 text-gray-600 text-xs uppercase">
+                                <tr>
+                                    <th class="p-3 rounded-l-xl">Txn ID</th>
+                                    <th class="p-3">Service</th>
+                                    <th class="p-3">Details</th>
+                                    <th class="p-3">Amount</th>
+                                    <th class="p-3 rounded-r-xl">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transaction-table-body" class="divide-y divide-gray-100 text-gray-700">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- Add Money Modal -->
+    <div id="add-money-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-gray-800">Add Money to Wallet</h3>
+                <button onclick="closeModal('add-money-modal')" class="text-gray-400 hover:text-gray-600 font-bold text-lg">×</button>
+            </div>
+            <form onsubmit="handleWalletTopUp(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Enter Amount (₹)</label>
+                    <input type="number" id="topup-amount" min="100" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="e.g. 1000">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm">Proceed to Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PAN Card Service Modal -->
+    <div id="service-pan-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-gray-800">PAN Card Application</h3>
+                <button onclick="closeModal('service-pan-modal')" class="text-gray-400 hover:text-gray-600 font-bold text-lg">×</button>
+            </div>
+            <form onsubmit="processTransaction(event, 'PAN Card', 107, 'service-pan-modal')" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Customer Full Name</label>
+                    <input type="text" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="As per Aadhaar">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Aadhaar Number</label>
+                    <input type="text" maxlength="12" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="12-digit Aadhaar">
+                </div>
+                <div class="bg-blue-50 p-3 rounded-xl text-xs text-blue-800">
+                    Fee: <b>₹107.00</b> will be deducted from your wallet.
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AEPS Withdrawal Modal -->
+    <div id="service-aeps-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-gray-800">AEPS Cash Withdrawal</h3>
+                <button onclick="closeModal('service-aeps-modal')" class="text-gray-400 hover:text-gray-600 font-bold text-lg">×</button>
+            </div>
+            <form onsubmit="processAepsTransaction(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Customer Aadhaar Number</label>
+                    <input type="text" maxlength="12" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="12-digit Aadhaar">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Select Bank</label>
+                    <select class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm">
+                        <option>State Bank of India</option>
+                        <option>Punjab National Bank</option>
+                        <option>Bank of Baroda</option>
+                        <option>Paytm Payments Bank</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Withdrawal Amount (₹)</label>
+                    <input type="number" id="aeps-amt" min="100" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="Enter amount">
+                </div>
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm">Scan Fingerprint & Withdraw</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Recharge Modal -->
+    <div id="service-recharge-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-gray-800">Mobile Recharge</h3>
+                <button onclick="closeModal('service-recharge-modal')" class="text-gray-400 hover:text-gray-600 font-bold text-lg">×</button>
+            </div>
+            <form onsubmit="processTransaction(event, 'Mobile Recharge', 299, 'service-recharge-modal')" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Mobile Number</label>
+                    <input type="tel" maxlength="10" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="10-digit number">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Operator</label>
+                    <select class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm">
+                        <option>Airtel</option>
+                        <option>Jio</option>
+                        <option>Vi</option>
+                        <option>BSNL</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Plan Amount (₹)</label>
+                    <input type="number" value="299" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm">
+                </div>
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm">Recharge Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Utility Bill Modal -->
+    <div id="service-bill-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-gray-800">Utility Bill Payment</h3>
+                <button onclick="closeModal('service-bill-modal')" class="text-gray-400 hover:text-gray-600 font-bold text-lg">×</button>
+            </div>
+            <form onsubmit="processTransaction(event, 'Electricity Bill', 550, 'service-bill-modal')" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Consumer / Account Number</label>
+                    <input type="text" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="Enter consumer number">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Bill Amount (₹)</label>
+                    <input type="number" value="550" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm">
+                </div>
+                <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm">Pay Bill</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Money Transfer Modal -->
+    <div id="service-dmt-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-gray-800">Money Transfer (DMT)</h3>
+                <button onclick="closeModal('service-dmt-modal')" class="text-gray-400 hover:text-gray-600 font-bold text-lg">×</button>
+            </div>
+            <form onsubmit="processTransaction(event, 'Money Transfer', 1000, 'service-dmt-modal')" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Beneficiary Account Number</label>
+                    <input type="text" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm" placeholder="Account number">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">IFSC Code</label>
+                    <input type="text" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm uppercase" placeholder="SBIN000XXXX">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 mb-1">Transfer Amount (₹)</label>
+                    <input type="number" value="1000" required class="w-full px-4 py-2 rounded-xl border border-gray-200 text-sm">
+                </div>
+                <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 rounded-xl shadow transition text-sm">Transfer Money</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // State Management
+        let currentUser = JSON.parse(localStorage.getItem('portal_current_user')) || null;
+        let walletBalance = parseFloat(localStorage.getItem('portal_wallet')) || 2450.00;
+        let transactions = JSON.parse(localStorage.getItem('portal_transactions')) || [
+            { id: 'TXN984210', service: 'Mobile Recharge', details: 'Airtel • 9839XXXXXX', amount: 299, status: 'Success' },
+            { id: 'TXN984209', service: 'PAN Card Application', details: 'NSDL e-KYC', amount: 107, status: 'Success' },
+            { id: 'TXN984208', service: 'AEPS Withdrawal', details: 'State Bank of India', amount: 2000, status: 'Success' }
+        ];
+
+        // Init on Load
+        window.onload = function() {
+            if (currentUser) {
+                showDashboard();
+            } else {
+                showAuth();
+            }
+            renderTransactions();
+        };
+
+        function switchAuthTab(tab) {
+            const loginForm = document.getElementById('login-form');
+            const regForm = document.getElementById('register-form');
+            const loginBtn = document.getElementById('tab-login-btn');
+            const regBtn = document.getElementById('tab-register-btn');
+
+            if (tab === 'login') {
+                loginForm.classList.remove('hidden');
+                regForm.classList.add('hidden');
+                loginBtn.className = "flex-1 py-2 text-sm font-semibold rounded-lg bg-white text-blue-600 shadow-sm transition";
+                regBtn.className = "flex-1 py-2 text-sm font-semibold rounded-lg text-gray-500 hover:text-gray-800 transition";
+            } else {
+                loginForm.classList.add('hidden');
+                regForm.classList.remove('hidden');
+                regBtn.className = "flex-1 py-2 text-sm font-semibold rounded-lg bg-white text-green-600 shadow-sm transition";
+                loginBtn.className = "flex-1 py-2 text-sm font-semibold rounded-lg text-gray-500 hover:text-gray-800 transition";
+            }
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const mobile = document.getElementById('reg-mobile').value;
+            const password = document.getElementById('reg-password').value;
+
+            let users = JSON.parse(localStorage.getItem('portal_users')) || [];
+            if (users.some(u => u.mobile === mobile)) {
+                showToast("This mobile number is already registered!", "error");
+                return;
+            }
+
+            const newUser = { name, mobile, password };
+            users.push(newUser);
+            localStorage.setItem('portal_users', JSON.stringify(users));
+
+            showToast("Account created successfully! Please login.", "success");
+            switchAuthTab('login');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const id = document.getElementById('login-id').value;
+            const password = document.getElementById('login-password').value;
+
+            let users = JSON.parse(localStorage.getItem('portal_users')) || [];
+            const user = users.find(u => u.mobile === id && u.password === password);
+
+            // Default fallback for demo user Pawan Kumar
+            if ((id === '9839000000' && password === '123456') || (user)) {
+                currentUser = user || { name: 'Pawan Kumar', mobile: id };
+                localStorage.setItem('portal_current_user', JSON.stringify(currentUser));
+                showDashboard();
+                showToast("Login Successful!", "success");
+            } else {
+                showToast("Invalid Login ID or Password!", "error");
+            }
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('portal_current_user');
+            currentUser = null;
+            showAuth();
+            showToast("Logged out successfully", "success");
+        }
+
+        function showDashboard() {
+            document.getElementById('auth-container').classList.add('hidden');
+            document.getElementById('dashboard-container').classList.remove('hidden');
+            document.getElementById('welcome-title').innerText = `Welcome back, ${currentUser.name}!`;
+            document.getElementById('user-name-display').innerText = currentUser.name;
+            const initials = currentUser.name.split(' ').map(n => n[0]).join('').toUpperCase();
+            document.getElementById('user-avatar').innerText = initials;
+            updateWalletUI();
+        }
+
+        function showAuth() {
+            document.getElementById('dashboard-container').classList.add('hidden');
+            document.getElementById('auth-container').classList.remove('hidden');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        function updateWalletUI() {
+            document.getElementById('wallet-balance-display').innerText = `₹ ${walletBalance.toFixed(2)}`;
+            localStorage.setItem('portal_wallet', walletBalance);
+        }
+
+        function handleWalletTopUp(e) {
+            e.preventDefault();
+            const amt = parseFloat(document.getElementById('topup-amount').value);
+            walletBalance += amt;
+            updateWalletUI();
+
+            const txnID = 'TXN' + Math.floor(100000 + Math.random() * 900000);
+            transactions.unshift({ id: txnID, service: 'Wallet TopUp', details: 'Online UPI / QR', amount: amt, status: 'Success' });
+            saveAndRenderTransactions();
+
+            closeModal('add-money-modal');
+            showToast(`Successfully added ₹${amt} to wallet!`, "success");
+            e.target.reset();
+        }
+
+        function processTransaction(e, serviceName, amount, modalId) {
+            e.preventDefault();
+            if (walletBalance < amount && serviceName !== 'AEPS Withdrawal') {
+                showToast("Insufficient wallet balance!", "error");
+                return;
+            }
+
+            walletBalance -= amount;
+            updateWalletUI();
+
+            const txnID = 'TXN' + Math.floor(100000 + Math.random() * 900000);
+            transactions.unshift({ id: txnID, service: serviceName, details: 'Instant Processing', amount: amount, status: 'Success' });
+            saveAndRenderTransactions();
+
+            closeModal(modalId);
+            showToast(`${serviceName} processed successfully!`, "success");
+            e.target.reset();
+        }
+
+        function processAepsTransaction(e) {
+            e.preventDefault();
+            const amt = parseFloat(document.getElementById('aeps-amt').value);
+            walletBalance += amt; // AEPS cash withdrawal credits retailer wallet / cash balance
+            updateWalletUI();
+
+            const txnID = 'TXN' + Math.floor(100000 + Math.random() * 900000);
+            transactions.unshift({ id: txnID, service: 'AEPS Withdrawal', details: 'Biometric Cash Out', amount: amt, status: 'Success' });
+            saveAndRenderTransactions();
+
+            closeModal('service-aeps-modal');
+            showToast(`AEPS Withdrawal of ₹${amt} successful!`, "success");
+            e.target.reset();
+        }
+
+        function saveAndRenderTransactions() {
+            localStorage.setItem('portal_transactions', JSON.stringify(transactions));
+            renderTransactions();
+        }
+
+        function renderTransactions() {
+            const tbody = document.getElementById('transaction-table-body');
+            tbody.innerHTML = '';
+            transactions.forEach(txn => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3 font-mono text-xs">${txn.id}</td>
+                    <td class="p-3 font-medium">${txn.service}</td>
+                    <td class="p-3 text-xs text-gray-500">${txn.details}</td>
+                    <td class="p-3 font-semibold">₹ ${txn.amount.toFixed(2)}</td>
+                    <td class="p-3"><span class="bg-green-100 text-green-700 text-xs px-2.5 py-1 rounded-full font-medium">${txn.status}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function showToast(msg, type) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-msg');
+            const iconEl = document.getElementById('toast-icon');
+
+            msgEl.innerText = msg;
+            if(type === 'error') {
+                iconEl.className = "fa-solid fa-circle-exclamation text-red-400";
+            } else {
+                iconEl.className = "fa-solid fa-circle-check text-green-400";
+            }
+
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
