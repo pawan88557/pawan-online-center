@@ -1,401 +1,309 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#075985">
-<meta name="description" content="Pawan Online Center - Jafarganj, Fatehpur">
-<title>Pawan Online Center | Jafarganj Fatehpur</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Online Center - All India Online Service</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
- font-family:Arial,Helvetica,sans-serif;
- background:#f1f5f9;
- color:#172033;
- line-height:1.5;
-}
-header{
- background:linear-gradient(135deg,#075985,#2563eb,#7c3aed);
- color:white;
- padding:25px 15px;
- text-align:center;
-}
-.logo{
- width:72px;height:72px;border-radius:50%;
- background:white;color:#075985;
- display:flex;align-items:center;justify-content:center;
- font-size:42px;font-weight:bold;
- margin:auto;
- box-shadow:0 5px 20px #0004;
-}
-header h1{margin-top:10px;font-size:30px}
-header p{margin:5px 0}
-.badge{
- display:inline-block;background:#ffffff22;
- border:1px solid #ffffff55;
- padding:6px 12px;border-radius:20px;
- margin-top:8px;font-size:13px;
-}
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2, #ff758c, #ff7eb3);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-.container{max-width:1200px;margin:auto;padding:15px}
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-.notice{
- background:#fff7ed;
- border-left:5px solid #f97316;
- padding:14px;
- border-radius:10px;
- margin:15px 0;
-}
+        .container {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
 
-.search{
- width:100%;
- padding:15px;
- border:2px solid #dbeafe;
- border-radius:12px;
- font-size:16px;
- outline:none;
- margin-bottom:15px;
-}
-.search:focus{border-color:#2563eb}
+        .container:hover {
+            transform: translateY(-5px);
+        }
 
-.filters{
- display:flex;gap:8px;overflow-x:auto;
- padding-bottom:12px;
-}
-.filters button{
- border:0;background:#fff;
- padding:10px 15px;border-radius:25px;
- white-space:nowrap;cursor:pointer;
- box-shadow:0 2px 8px #0001;
-}
-.filters button.active{
- background:#2563eb;color:white;
-}
+        .form-header {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
 
-.section-title{
- margin:22px 0 12px;
- color:#0f172a;
- font-size:22px;
-}
+        .form-header h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
 
-.grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:13px;
-}
+        .form-header p {
+            font-size: 13px;
+            opacity: 0.9;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 5px;
+        }
 
-.card{
- background:white;
- border-radius:15px;
- padding:17px;
- box-shadow:0 4px 15px #00000012;
- border:1px solid #e5e7eb;
- transition:.2s;
-}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0002}
-.icon{
- font-size:30px;
- margin-bottom:8px;
-}
-.card h3{font-size:17px;margin-bottom:5px}
-.card p{font-size:13px;color:#64748b;margin-bottom:12px}
-.btn{
- display:inline-block;
- text-decoration:none;
- background:#2563eb;
- color:white;
- padding:9px 13px;
- border-radius:8px;
- font-size:13px;
-}
-.btn.green{background:#16a34a}
+        .tab-buttons {
+            display: flex;
+            background: #f0f2f5;
+            padding: 6px;
+            margin: 15px 20px 0 20px;
+            border-radius: 12px;
+        }
 
-.bank{
- border-top:4px solid #2563eb;
-}
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: none;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #666;
+            border-radius: 8px;
+        }
 
-.contact{
- margin-top:25px;
- background:linear-gradient(135deg,#0f172a,#1e3a8a);
- color:white;
- border-radius:18px;
- padding:25px;
- text-align:center;
-}
-.contact h2{margin-bottom:8px}
-.contact a{
- display:inline-block;
- margin:8px 4px;
- padding:12px 18px;
- border-radius:10px;
- text-decoration:none;
- color:white;
- background:#16a34a;
-}
-.contact a.call{background:#2563eb}
+        .tab-btn.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+        }
 
-footer{
- margin-top:20px;
- padding:20px;
- text-align:center;
- background:#0f172a;
- color:#cbd5e1;
- font-size:13px;
-}
+        .form-body {
+            padding: 25px 30px 30px 30px;
+        }
 
-.float{
- position:fixed;
- right:15px;
- bottom:15px;
- display:flex;
- flex-direction:column;
- gap:8px;
- z-index:99;
-}
-.float a{
- width:52px;height:52px;
- border-radius:50%;
- display:flex;
- align-items:center;
- justify-content:center;
- color:white;
- text-decoration:none;
- font-size:24px;
- box-shadow:0 4px 12px #0004;
-}
-.wa{background:#16a34a}
-.ph{background:#2563eb}
+        .form-group {
+            margin-bottom: 18px;
+            position: relative;
+        }
 
-.hidden{display:none!important}
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #444;
+            font-size: 13px;
+        }
 
-@media(max-width:600px){
- header h1{font-size:24px}
- .grid{grid-template-columns:1fr 1fr;gap:9px}
- .card{padding:13px}
- .card h3{font-size:15px}
- .icon{font-size:25px}
- .btn{font-size:12px;padding:8px 10px}
-}
-</style>
+        .input-box {
+            position: relative;
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #764ba2;
+            font-size: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+
+        .form-group input:focus {
+            border-color: #667eea;
+            background: #fff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #5a6fd6, #683d94);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .footer-note span {
+            color: #ff416c;
+            font-weight: 600;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
- <div class="logo">P</div>
- <h1>पवन ऑनलाइन सेंटर</h1>
- <p>Pawan Online Center</p>
- <p>📍 Jafarganj, Fatehpur (U.P.)</p>
- <span class="badge">सभी Online Services एक ही जगह</span>
-</header>
-
-<div class="container">
-
-<div class="notice">
- <b>⚠️ महत्वपूर्ण सूचना:</b>
- यह एक निजी सहायता पोर्टल है। यह किसी सरकारी विभाग या बैंक की आधिकारिक वेबसाइट नहीं है।
- Aadhaar OTP, PIN, Password, Fingerprint या बैंक Login details इस वेबसाइट पर दर्ज न करें।
-</div>
-
-<input id="search" class="search"
- placeholder="🔎 सेवा खोजें... जैसे Aadhaar, PAN, Voter, Bank">
-
-<div class="filters">
- <button class="active" onclick="filterCards('all',this)">सभी</button>
- <button onclick="filterCards('aadhaar',this)">🪪 Aadhaar</button>
- <button onclick="filterCards('gov',this)">🏛️ Government</button>
- <button onclick="filterCards('vehicle',this)">🚗 Vehicle</button>
- <button onclick="filterCards('student',this)">🎓 Student</button>
- <button onclick="filterCards('bank',this)">🏦 Banking</button>
- <button onclick="filterCards('print',this)">🖨️ Print</button>
-</div>
-
-<h2 class="section-title">⭐ Online Services</h2>
-
-<div id="services" class="grid">
-
-<div class="card aadhaar"><div class="icon">🪪</div><h3>Aadhaar e-PDF Download</h3><p>Official Aadhaar download</p><a class="btn" href="https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">🪪</div><h3>Masked Aadhaar</h3><p>Masked Aadhaar service</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">📱</div><h3>Aadhaar Mobile Update</h3><p>Update information</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">🏠</div><h3>Aadhaar Address Update</h3><p>Address update assistance</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">🔐</div><h3>Aadhaar Lock / Unlock</h3><p>Official UIDAI service</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">🔍</div><h3>Aadhaar Authentication History</h3><p>Check authentication history</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">🆔</div><h3>VID Generate</h3><p>Virtual ID service</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
-
-<div class="card aadhaar"><div class="icon">👆</div><h3>Fingerprint से Aadhaar Print</h3><p>केवल अधिकृत Aadhaar operator/client द्वारा</p><a class="btn" href="https://uidai.gov.in/hi/enrolment-and-update" target="_blank">UIDAI Info</a></div>
-
-<div class="card gov"><div class="icon">🗳️</div><h3>Voter New Registration</h3><p>New voter registration</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🗳️</div><h3>Voter Correction</h3><p>Voter details correction</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">📄</div><h3>e-EPIC Download</h3><p>Digital voter card</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🔎</div><h3>Voter Search</h3><p>Search voter details</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">💳</div><h3>PAN Apply / Services</h3><p>PAN related assistance</p><a class="btn" href="https://www.incometax.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🔗</div><h3>PAN Aadhaar Services</h3><p>PAN-Aadhaar related services</p><a class="btn" href="https://www.incometax.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">📑</div><h3>DigiLocker</h3><p>Digital documents</p><a class="btn" href="https://www.digilocker.gov.in/" target="_blank">Open</a></div>
-
-<div class="card vehicle"><div class="icon">🚗</div><h3>Driving Licence</h3><p>DL online services</p><a class="btn" href="https://sarathi.parivahan.gov.in/" target="_blank">Open</a></div>
-
-<div class="card vehicle"><div class="icon">🚘</div><h3>Vehicle RC</h3><p>Registration services</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
-
-<div class="card vehicle"><div class="icon">🔎</div><h3>Vehicle Details</h3><p>Vehicle information</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
-
-<div class="card vehicle"><div class="icon">🌱</div><h3>Pollution / PUC</h3><p>PUC related service</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
-
-<div class="card vehicle"><div class="icon">💰</div><h3>Vehicle Tax / Fees</h3><p>Vehicle tax assistance</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🍚</div><h3>Ration Card Services</h3><p>NFSA related services</p><a class="btn" href="https://nfsa.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🏥</div><h3>Ayushman Beneficiary</h3><p>Beneficiary portal</p><a class="btn" href="https://beneficiary.nha.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">💉</div><h3>COVID Certificate</h3><p>Official certificate portal</p><a class="btn" href="https://www.cowin.gov.in/" target="_blank">Open</a></div>
-
-<div class="card student"><div class="icon">🎓</div><h3>UP Scholarship</h3><p>Scholarship portal</p><a class="btn" href="https://scholarship.up.gov.in/" target="_blank">Open</a></div>
-
-<div class="card student"><div class="icon">📚</div><h3>Student Online Services</h3><p>Student assistance</p><a class="btn" href="https://scholarship.up.gov.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">💼</div><h3>Rojgaar Sangam</h3><p>Employment services</p><a class="btn" href="https://rojgaarsangam.up.gov.in/home" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">👷</div><h3>NREGA / Job Card</h3><p>MGNREGA services</p><a class="btn" href="https://nrega.nic.in/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🏛️</div><h3>UP e-District</h3><p>Government certificates</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">💵</div><h3>Income Certificate</h3><p>Income certificate assistance</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">🏠</div><h3>Residence Certificate</h3><p>Domicile certificate</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
-
-<div class="card gov"><div class="icon">📜</div><h3>Caste Certificate</h3><p>Caste certificate</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
-
-<div class="card print"><div class="icon">🖨️</div><h3>PDF Print</h3><p>Document printing</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
-
-<div class="card print"><div class="icon">📷</div><h3>Photo Print</h3><p>Photo printing service</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
-
-<div class="card print"><div class="icon">📄</div><h3>Photocopy</h3><p>Black & white photocopy</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
-
-<div class="card print"><div class="icon">🌈</div><h3>Color Print</h3><p>Color document printing</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
-
-<div class="card print"><div class="icon">🪪</div><h3>ID Card Print</h3><p>ID card printing</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
-
-<div class="card print"><div class="icon">📝</div><h3>Online Form Filling</h3><p>Online form assistance</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
-
-</div>
-
-<h2 class="section-title">🏦 Banking / BC / CSP / Kiosk</h2>
-
-<div class="notice">
- <b>🔐 Banking Security:</b>
- नीचे दिए गए लिंक केवल संबंधित बैंक की official website पर ले जाते हैं।
- अपना Bank Password, ATM PIN, OTP या biometric किसी अनधिकृत व्यक्ति/वेबसाइट को न दें।
-</div>
-
-<div id="banks" class="grid">
-
-<div class="card bank"><div class="icon">🏦</div><h3>State Bank of India</h3><p>SBI Official Portal</p><a class="btn" href="https://sbi.co.in/" target="_blank">Open SBI</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Bank of Baroda</h3><p>Official Bank Portal</p><a class="btn" href="https://www.bankofbaroda.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Bank of India</h3><p>Official Bank Portal</p><a class="btn" href="https://bankofindia.co.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Bank of Maharashtra</h3><p>Official Bank Portal</p><a class="btn" href="https://bankofmaharashtra.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Canara Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.canarabank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Central Bank of India</h3><p>Official Bank Portal</p><a class="btn" href="https://centralbank.bank.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Indian Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.indianbank.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Indian Overseas Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.iob.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Punjab National Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.pnbindia.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Punjab & Sind Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://punjabandsindbank.co.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Union Bank of India</h3><p>Official Bank Portal</p><a class="btn" href="https://www.unionbankofindia.co.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>UCO Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.ucobank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Axis Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.axisbank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Bandhan Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://bandhanbank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Federal Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.federalbank.co.in/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>HDFC Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.hdfcbank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>ICICI Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.icicibank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>IDFC FIRST Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.idfcfirstbank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>IndusInd Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.indusind.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>Kotak Mahindra Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.kotak.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>RBL Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.rblbank.com/" target="_blank">Open</a></div>
-
-<div class="card bank"><div class="icon">🏦</div><h3>YES BANK</h3><p>Official Bank Portal</p><a class="btn" href="https://www.yesbank.in/" target="_blank">Open</a></div>
-
-</div>
-
-<div class="contact">
- <h2>📞 पवन ऑनलाइन सेंटर</h2>
- <p>Jafarganj, Fatehpur (U.P.)</p>
- <p>Online Form • Print • Aadhaar Assistance • Digital Services</p>
- <a class="call" href="tel:+917052724014">📞 Call: 7052724014</a>
- <a href="https://wa.me/917052724014" target="_blank">💬 WhatsApp</a>
-</div>
-
-</div>
-
-<footer>
- © 2026 Pawan Online Center • Jafarganj, Fatehpur, U.P.<br>
- Private Assistance Portal • Not a Government Website
-</footer>
-
-<div class="float">
- <a class="wa" href="https://wa.me/917052724014" target="_blank">💬</a>
- <a class="ph" href="tel:+917052724014">📞</a>
-</div>
-
-<script>
-const search=document.getElementById("search");
-
-search.addEventListener("input",function(){
- const q=this.value.toLowerCase();
- document.querySelectorAll("#services .card,#banks .card").forEach(card=>{
-   card.classList.toggle("hidden",!card.innerText.toLowerCase().includes(q));
- });
-});
-
-function filterCards(type,button){
- document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
- button.classList.add("active");
-
- document.querySelectorAll("#services .card").forEach(card=>{
-   if(type==="all" || card.classList.contains(type))
-     card.classList.remove("hidden");
-   else
-     card.classList.add("hidden");
- });
-
- if(type==="bank"){
-   document.querySelectorAll("#services .card").forEach(c=>c.classList.add("hidden"));
-   document.querySelectorAll("#banks .card").forEach(c=>c.classList.remove("hidden"));
- }else{
-   document.querySelectorAll("#banks .card").forEach(c=>c.classList.remove("hidden"));
- }
-}
-</script>
+    <div class="container">
+        <!-- Header -->
+        .
+        <div class="form-header">
+            <h2>Pawan Online Center</h2>
+            <p><i class="fa-solid fa-bolt"></i> All India Online Service Available</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('login')">लॉगिन (Login)</button>
+            <button class="tab-btn" onclick="switchTab('register')">रजिस्टर (Register)</button>
+        </div>
+
+        <div class="form-body">
+            <!-- Login Form -->
+            <form id="login-form" class="form-section active" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>मोबाइल नंबर या ईमेल</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="अपना रजिस्टर्ड नंबर दर्ज करें" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>पासवर्ड</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="अपना पासवर्ड दर्ज करें" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fa-solid fa-right-to-bracket"></i> लॉगिन करें</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="form-section" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label>पूरा नाम (Full Name)</label>
+                    <div class="input-box">
+                        <i class="fa-solid id-card"></i>
+                        <input type="text" placeholder="अपना पूरा नाम दर्ज करें" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>मोबाइल नंबर (WhatsApp Number)</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" placeholder="10 अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>ईमेल आईडी</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>पासवर्ड बनाएं</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="मजबूत पासवर्ड बनाएं" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fa-solid fa-user-plus"></i> रजिस्टर करें</button>
+            </form>
+
+            <div class="footer-note">
+                Contact Admin: <span>+91 7052724014</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (tabName === 'login') {
+                loginForm.classList.add('active');
+                registerForm.classList.remove('active');
+                buttons[0].classList.add('active');
+            } else {
+                loginForm.classList.remove('active');
+                registerForm.classList.add('active');
+                buttons[1].classList.add('active');
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            alert('लॉगिन सफल रहा! (Pawan Online Center)');
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            alert('रजिस्ट्रेशन सफल रहा! आपकी आईडी क्रिएट हो गई है।');
+        }
+    </script>
 
 </body>
 </html>
