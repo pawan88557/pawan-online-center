@@ -3,378 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center - Auto Service Portal</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Pawan Online Center - Digital & CSC Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f1f5f9;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 260px;
-            background-color: #0f172a;
-            color: #94a3b8;
-            display: flex;
-            flex-direction: column;
-            z-index: 100;
-        }
-
-        .sidebar-brand {
-            padding: 20px;
-            background: #1e293b;
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid #334155;
-        }
-
-        .sidebar-brand i { color: #38bdf8; }
-
-        .sidebar-menu {
-            list-style: none;
-            padding: 15px 10px;
-            overflow-y: auto;
-            flex-grow: 1;
-        }
-
-        .sidebar-menu::-webkit-scrollbar { width: 4px; }
-        .sidebar-menu::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
-
-        .sidebar-menu li { margin-bottom: 5px; }
-
-        .sidebar-menu a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 15px;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .sidebar-menu a:hover, .sidebar-menu a.active {
-            background-color: #2563eb;
-            color: white;
-        }
-
-        .sidebar-menu a i { width: 20px; text-align: center; }
-
-        /* Main Content */
-        .main-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        /* Top Navbar */
-        .top-navbar {
-            height: 65px;
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 25px;
-        }
-
-        .user-welcome {
-            font-size: 14px;
-            font-weight: 600;
-            color: #334155;
-        }
-
-        .top-badges {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .badge-box {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            color: white;
-        }
-
-        .badge-speed { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
-        .badge-wallet { background: linear-gradient(135deg, #10b981, #059669); }
-
-        /* Dashboard Body */
-        .dashboard-body {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background: #f8fafc;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 12px;
-        }
-
-        .service-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-2px);
-            border-color: #2563eb;
-            box-shadow: 0 8px 15px -3px rgba(37, 99, 235, 0.1);
-        }
-
-        .service-card i {
-            font-size: 24px;
-            color: #2563eb;
-            margin-bottom: 8px;
-        }
-
-        .service-card h4 {
-            font-size: 13px;
-            color: #1e293b;
-            font-weight: 600;
-        }
-
-        /* Auto Service Modal Form */
-        #auto-form-modal {
-            display: none;
-            background: white;
-            border: 1px solid #cbd5e1;
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 500px;
-            margin: 0 auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 12px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: 600;
-            color: #475569;
-            margin-bottom: 4px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 13px;
-        }
-
-        .auto-btn {
-            width: 100%;
-            padding: 11px;
-            background: #10b981;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .auto-btn:hover { background: #059669; }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 12px;
-            font-size: 12px;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 13px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-        }
-    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-brand">
-            <i class="fa-solid fa-bolt"></i>
-            <span>AUTO 5G PORTAL</span>
-        </div>
-        <ul class="sidebar-menu">
-            <li><a onclick="showHome()" class="active"><i class="fa-solid fa-house"></i> <span>डैशबोर्ड Home</span></a></li>
-            <li><a onclick="openAutoService('ड्राइविंग लाइसेंस PDF')"><i class="fa-solid fa-id-card"></i> <span>ड्राइविंग लाइसेंस ऑटो</span></a></li>
-            <li><a onclick="openAutoService('वोटर कार्ड ओरिजिनल')"><i class="fa-solid fa-address-card"></i> <span>वोटर कार्ड PDF ऑटो</span></a></li>
-            <li><a onclick="openAutoService('राशन कार्ड PDF')"><i class="fa-solid fa-file-lines"></i> <span>राशन कार्ड ऑटो</span></a></li>
-            <li><a onclick="openAutoService('आयुष्मान कार्ड सर्विस')"><i class="fa-solid fa-hospital-user"></i> <span>आयुष्मान ऑटो अप्रूव</span></a></li>
-            <li><a onclick="openAutoService('गाड़ी RC PDF')"><i class="fa-solid fa-car"></i> <span>गाड़ी RC PDF ऑटो</span></a></li>
-            <li><a onclick="openAutoService('पैन कार्ड अप्लाई')"><i class="fa-solid fa-id-badge"></i> <span>पैन कार्ड ऑटो</span></a></li>
-        </ul>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Top Navbar -->
-        <div class="top-navbar">
-            <div class="user-welcome">
-                Pawan Online Center - Auto Control Panel
-            </div>
-            <div class="top-badges">
-                <div class="badge-box badge-speed">
-                    <i class="fa-solid fa-bolt"></i> 5G SPEED AUTO
+    <!-- Top Header / Announcement Bar -->
+    <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-2 md:mb-0">
+                <div class="bg-white text-blue-700 p-2 rounded-full font-bold text-xl shadow">
+                    <i class="fa-solid fa-laptop-code"></i>
                 </div>
-                <div class="badge-box badge-wallet">
-                    <i class="fa-solid fa-wallet"></i> Wallet: ₹205
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide">Pawan Online Center</h1>
+                    <p class="text-xs text-blue-200">SBI CSP & Digital Services | जफरगंज, फतेहपुर (उ.प्र.)</p>
                 </div>
             </div>
+            <!-- Quick Contact Buttons -->
+            <div class="flex space-x-3">
+                <a href="tel:91XXXXXXXXXX" class="bg-green-600 hover:bg-green-700 text-white px-3 py-1.5 rounded-lg text-sm font-medium flex items-center shadow transition">
+                    <i class="fa-solid fa-phone mr-1.5"></i> Call Now
+                </a>
+                <a href="https://wa.me/91XXXXXXXXXX?text=नमस्ते%20पवन%20जी,%20मुझे%20ऑनलाइन%20सेवा%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium flex items-center shadow transition">
+                    <i class="fa-brands fa-whatsapp mr-1.5 text-lg"></i> WhatsApp
+                </a>
+            </div>
         </div>
+    </header>
 
-        <!-- Dashboard Body -->
-        <div class="dashboard-body" id="main-body">
-            <p style="margin-bottom: 12px; font-size: 13px; color: #64748b; font-weight: 600;">ऑटो सर्विस चुनने के लिए नीचे क्लिक करें:</p>
+    <!-- Search & Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-8 px-4 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">डिजिटल सेवा पोर्टल - सभी काम एक ही जगह</h2>
+            <p class="text-blue-100 text-sm md:text-base mb-6">आधार, पैन, वोटर कार्ड, ड्राइविंग लाइसेंस, आय-जाति प्रमाण पत्र और बैंकिंग सेवाएँ खोजें।</p>
             
-            <div class="services-grid" id="service-grid-box">
-                <div class="service-card" onclick="openAutoService('ड्राइविंग लाइसेंस PDF')">
-                    <i class="fa-solid fa-id-card"></i>
-                    <h4>ड्राइविंग लाइसेंस PDF</h4>
-                </div>
-                <div class="service-card" onclick="openAutoService('वोटर कार्ड ओरिजिनल')">
-                    <i class="fa-solid fa-address-card"></i>
-                    <h4>वोटर कार्ड ओरिजिनल</h4>
-                </div>
-                <div class="service-card" onclick="openAutoService('राशन कार्ड PDF')">
-                    <i class="fa-solid fa-file-lines"></i>
-                    <h4>राशन कार्ड PDF</h4>
-                </div>
-                <div class="service-card" onclick="openAutoService('आयुष्मान कार्ड सर्विस')">
-                    <i class="fa-solid fa-hospital-user"></i>
-                    <h4>आयुष्मान कार्ड सर्विस</h4>
-                </div>
-                <div class="service-card" onclick="openAutoService('गाड़ी RC PDF')">
-                    <i class="fa-solid fa-car"></i>
-                    <h4>गाड़ी RC PDF</h4>
-                </div>
-                <div class="service-card" onclick="openAutoService('पैन कार्ड अप्लाई')">
-                    <i class="fa-solid fa-id-badge"></i>
-                    <h4>पैन कार्ड अप्लाई</h4>
-                </div>
-            </div>
-
-            <!-- Auto-Service Form Modal (Hidden initially) -->
-            <div id="auto-form-modal">
-                <a class="back-link" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> वापस डैशबोर्ड पर जाएं</a>
-                <h3 id="modal-title" style="font-size: 16px; color: #1e293b; margin-bottom: 15px;">Auto Process</h3>
-                <form onsubmit="submitAutoTask(event)">
-                    <div class="form-group">
-                        <label id="input-label-1">कस्टमर नंबर / आईडी</label>
-                        <input type="text" id="field-1" placeholder="डेटा दर्ज करें" required>
-                    </div>
-                    <div class="form-group">
-                        <label>व्हाट्सएप मोबाइल नंबर (अपडेट पाने के लिए)</label>
-                        <input type="tel" id="field-whatsapp" placeholder="10 अंकों का नंबर" pattern="[0-9]{10}" required>
-                    </div>
-                    <button type="submit" class="auto-btn"><i class="fa-solid fa-bolt"></i> 5G स्पीड ऑटो प्रोसेस शुरू करें</button>
-                </form>
+            <!-- Search Bar -->
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" id="searchBox" onkeyup="filterServices()" placeholder="यहाँ सेवा का नाम लिखें (जैसे: PAN, Voter, Ayushman, Bank)..." 
+                    class="w-full pl-12 pr-4 py-3.5 rounded-xl text-gray-800 bg-white shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm md:text-base">
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- WhatsApp Support Floating Button -->
-    <a href="https://wa.me/917052724014?text=Hello%20Admin,%20Auto%20Service%20portal%20se%20baat%20karni%20hai." target="_blank" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i> Support
-    </a>
+    <!-- Main Container -->
+    <main class="container mx-auto px-4 py-8">
 
+        <!-- Category Section -->
+        <div id="servicesContainer">
+
+            <!-- 1. Banking & CSP Services -->
+            <div class="service-category mb-8" data-category="banking csp sbi money">
+                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
+                    <i class="fa-solid fa-building-columns mr-2 text-blue-600"></i> SBI CSP & बैंकिंग सेवाएँ
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="https://retail.onlinesbi.sbi/retail/login.htm" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-blue-600 mb-2"><i class="fa-solid fa-piggy-bank"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">SBI खाता संबंधित</h4>
+                        <p class="text-xs text-gray-500">बैलेंस, मिनी स्टेटमेंट</p>
+                    </a>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-green-600 mb-2"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Aadhaar Pay / AEPS</h4>
+                        <p class="text-xs text-gray-500">नकद निकासी व जमा</p>
+                    </div>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-amber-600 mb-2"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Money Transfer</h4>
+                        <p class="text-xs text-gray-500">किसी भी बैंक में भेजें पैसे</p>
+                    </div>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-indigo-600 mb-2"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Bill Payment</h4>
+                        <p class="text-xs text-gray-500">बिजली, पानी, मोबाइल रिचार्ज</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Govt IDs & Aadhaar / PAN -->
+            <div class="service-category mb-8" data-category="aadhaar pan voter id">
+                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
+                    <i class="fa-solid fa-id-card mr-2 text-blue-600"></i> आधार, पैन और पहचान पत्र सेवाएँ
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-blue-500 mb-2"><i class="fa-solid fa-fingerprint"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Aadhaar Services</h4>
+                        <p class="text-xs text-gray-500">डाउनलोड, एड्रेस अपडेट</p>
+                    </a>
+                    <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-orange-500 mb-2"><i class="fa-solid fa-address-card"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">PAN Card Apply</h4>
+                        <p class="text-xs text-gray-500">नया पैन कार्ड व सुधार</p>
+                    </a>
+                    <a href="https://voters.eci.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-blue-800 mb-2"><i class="fa-solid fa-check-to-slot"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Voter ID (ECI)</h4>
+                        <p class="text-xs text-gray-500">नया वोटर कार्ड, करेक्शन</p>
+                    </a>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-purple-600 mb-2"><i class="fa-solid fa-print"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">PVC Card Print</h4>
+                        <p class="text-xs text-gray-500">पॉलीकार्बोनेट प्लास्टिक कार्ड</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Transport & Vehicle Services -->
+            <div class="service-category mb-8" data-category="dl rc transport vehicle driving licence">
+                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
+                    <i class="fa-solid fa-car mr-2 text-blue-600"></i> ड्राइविंग लाइसेंस & वाहन (RTO) सेवाएँ
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="https://sarathi.parivahan.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-indigo-500 mb-2"><i class="fa-solid fa-id-badge"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Driving Licence (DL)</h4>
+                        <p class="text-xs text-gray-500">नया लर्निंग / डीएल आवेदन</p>
+                    </a>
+                    <a href="https://echallan.parivahan.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-red-500 mb-2"><i class="fa-solid fa-receipt"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">E-Challan Payment</h4>
+                        <p class="text-xs text-gray-500">वाहन चालान चेक व भुगतान</p>
+                    </a>
+                    <a href="https://vahan.parivahan.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-green-600 mb-2"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Vehicle RC Status</h4>
+                        <p class="text-xs text-gray-500">गाड़ी की जानकारी व फिटनेस</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. Welfare, Ration & Ayushman -->
+            <div class="service-category mb-8" data-category="ration ayushman eshram scholarship welfare">
+                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
+                    <i class="fa-solid fa-hands-holding-child mr-2 text-blue-600"></i> राशन कार्ड, आयुष्मान और सरकारी योजनाएँ
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="https://fcs.up.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-yellow-600 mb-2"><i class="fa-solid fa-bowl-food"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Ration Card (UP)</h4>
+                        <p class="text-xs text-gray-500">राशन पात्रता सूची व यूनिट</p>
+                    </a>
+                    <a href="https://beneficiary.nha.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-blue-600 mb-2"><i class="fa-solid fa-hospital-user"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Ayushman Card</h4>
+                        <p class="text-xs text-gray-500">5 लाख तक मुफ्त इलाज कार्ड</p>
+                    </a>
+                    <a href="https://scholarship.up.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-emerald-600 mb-2"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">UP Scholarship</h4>
+                        <p class="text-xs text-gray-500">छात्रवृत्ति आवेदन व स्टेटस</p>
+                    </a>
+                    <a href="https://eshram.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-cyan-600 mb-2"><i class="fa-solid fa-user-gear"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">E-Shram Card</h4>
+                        <p class="text-xs text-gray-500">असंगत क्षेत्र श्रमिक कार्ड</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. e-District & Print Services -->
+            <div class="service-category mb-8" data-category="edistrict income caste domicile print photo scan">
+                <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-200 pb-2 mb-4 flex items-center">
+                    <i class="fa-solid fa-file-shield mr-2 text-blue-600"></i> ई-डिस्ट्रिक्ट और प्रिंटिंग/स्कैनिंग सेवाएँ
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    <a href="https://edistrict.up.gov.in/" target="_blank" class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1">
+                        <div class="text-3xl text-indigo-700 mb-2"><i class="fa-solid fa-certificate"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Income/Caste/Domicile</h4>
+                        <p class="text-xs text-gray-500">प्रमाण पत्र सत्यापन व आवेदन</p>
+                    </a>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-pink-600 mb-2"><i class="fa-solid fa-print"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Color Print / Lamination</h4>
+                        <p class="text-xs text-gray-500">हाई-क्वालिटी प्रिंटिंग सेवा</p>
+                    </div>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-teal-600 mb-2"><i class="fa-solid fa-camera"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Passport Size Photo</h4>
+                        <p class="text-xs text-gray-500">तत्काल फोटो प्रिंट</p>
+                    </div>
+                    <div class="service-card bg-white p-4 rounded-xl shadow hover:shadow-md border border-gray-100 flex flex-col items-center text-center transition hover:-translate-y-1 cursor-pointer">
+                        <div class="text-3xl text-blue-500 mb-2"><i class="fa-solid fa-file-pdf"></i></div>
+                        <h4 class="font-semibold text-sm mb-1">Document Scan & PDF</h4>
+                        <p class="text-xs text-gray-500">मेल और व्हाट्सएप शेयरिंग</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-lg font-bold mb-2">Pawan Online Center</h3>
+            <p class="text-sm text-gray-400 mb-4">पता: जफरगंज, फतेहपुर, उत्तर प्रदेश | सभी प्रकार के ऑनलाइन फॉर्म व बैंकिंग कार्य हेतु पधारें।</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="tel:917052724014" class="bg-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+                    <i class="fa-solid fa-phone mr-2"></i>कॉल करें
+                </a>
+                <a href="https://wa.me/917052724014" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i>व्हाट्सएप मैसेज
+                </a>
+            </div>
+            <p class="text-xs text-gray-500">&copy; 2026 Pawan Online Center. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Search Filter Script -->
     <script>
-        let currentService = '';
+        function filterServices() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let categories = document.querySelectorAll('.service-category');
 
-        function openAutoService(serviceName) {
-            currentService = serviceName;
-            document.getElementById('service-grid-box').style.display = 'none';
-            document.getElementById('auto-form-modal').style.display = 'block';
-            document.getElementById('modal-title').innerText = `⚡ Auto Process: ${serviceName}`;
-            
-            if(serviceName.includes('गाड़ी')) {
-                document.getElementById('input-label-1').innerText = 'गाड़ी नंबर (Vehicle Number / RC)';
-            } else if(serviceName.includes('वोटर')) {
-                document.getElementById('input-label-1').innerText = 'एपिक नंबर (EPIC Number)';
-            } else {
-                document.getElementById('input-label-1').innerText = 'आवश्यक आईडी नंबर (Number / ID)';
-            }
-        }
+            categories.forEach(category => {
+                let keywords = category.getAttribute('data-category').toLowerCase();
+                let cards = category.querySelectorAll('.service-card');
+                let categoryMatch = keywords.includes(input);
+                let hasVisibleCard = false;
 
-        function showHome() {
-            document.getElementById('auto-form-modal').style.display = 'none';
-            document.getElementById('service-grid-box').style.display = 'grid';
-        }
+                cards.forEach(card => {
+                    let text = card.innerText.toLowerCase();
+                    if (text.includes(input) || categoryMatch) {
+                        card.style.display = "flex";
+                        hasVisibleCard = true;
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
 
-        function submitAutoTask(event) {
-            event.preventDefault();
-            const val1 = document.getElementById('field-1').value;
-            const whatsapp = document.getElementById('field-whatsapp').value;
-
-            // WhatsApp पर ऑटोमैटिक मैसेज भेजने का कोड (ऑटोमेशन सिम्युलेशन)
-            const adminNumber = "917052724014";
-            const message = `⚡ [AUTO SERVICE REQUEST]\nService: ${currentService}\nDetails: ${val1}\nCustomer WhatsApp: ${whatsapp}`;
-            
-            alert('डेटा सफलतापूर्वक ऑटो-प्रकोसिंग कतार में चला गया है! अब व्हाट्सएप पर रीडायरेक्ट हो रहा है।');
-            
-            const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-            showHome();
+                if (hasVisibleCard || input === "") {
+                    category.style.display = "block";
+                } else {
+                    category.style.display = "none";
+                }
+            });
         }
     </script>
-
 </body>
 </html>
