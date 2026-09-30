@@ -35,10 +35,10 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(12px);
             width: 100%;
-            max-width: 480px;
+            max-width: 500px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             overflow: hidden;
@@ -48,21 +48,21 @@
         .form-header {
             background: linear-gradient(135deg, #ff416c, #ff4b2b);
             color: white;
-            padding: 25px 20px;
+            padding: 22px 20px;
             text-align: center;
         }
 
         .form-header h2 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .form-header p {
-            font-size: 13px;
+            font-size: 12px;
             opacity: 0.9;
             background: rgba(0, 0, 0, 0.15);
-            padding: 4px 10px;
+            padding: 3px 10px;
             border-radius: 20px;
             display: inline-block;
             margin-top: 5px;
@@ -78,10 +78,10 @@
 
         .tab-btn {
             flex: 1;
-            padding: 12px;
+            padding: 10px;
             border: none;
             background: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -96,16 +96,16 @@
         }
 
         .form-body {
-            padding: 25px 30px 30px 30px;
+            padding: 20px 25px 25px 25px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: 500;
             color: #444;
             font-size: 13px;
@@ -121,12 +121,12 @@
             top: 50%;
             transform: translateY(-50%);
             color: #764ba2;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .form-group input {
             width: 100%;
-            padding: 12px 15px 12px 45px;
+            padding: 11px 15px 11px 42px;
             border: 2px solid #e1e1e1;
             border-radius: 10px;
             font-size: 14px;
@@ -143,17 +143,17 @@
 
         .submit-btn {
             width: 100%;
-            padding: 14px;
+            padding: 12px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             border: none;
             color: white;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s;
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .submit-btn:hover {
@@ -172,30 +172,31 @@
         /* Dashboard Styles */
         #dashboard-section {
             display: none;
-            padding: 25px;
+            padding: 20px;
         }
 
         .dashboard-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         .dashboard-header h3 {
             color: #333;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .logout-btn {
             background: #ff416c;
             color: white;
             border: none;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 6px;
             cursor: pointer;
+            font-size: 12px;
             font-weight: 600;
         }
 
@@ -203,26 +204,38 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-            max-height: 300px;
+            max-height: 310px;
             overflow-y: auto;
+            padding-right: 4px;
         }
 
         .service-card {
-            background: #f8f9fa;
-            border: 1px solid #e1e1e1;
-            padding: 12px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 1px solid #dcdcdc;
+            padding: 12px 10px;
+            border-radius: 10px;
             text-align: center;
             font-size: 12px;
             font-weight: 600;
-            color: #444;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
         .alert-msg {
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 8px;
+            margin-bottom: 12px;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 12px;
             text-align: center;
             display: none;
         }
@@ -233,7 +246,7 @@
 </head>
 <body>
 
-    <div class="container" id="main-container">
+    <div class="container">
         <!-- Auth View -->
         <div id="auth-view">
             <div class="form-header">
@@ -256,14 +269,14 @@
                         <label>मोबाइल नंबर</label>
                         <div class="input-box">
                             <i class="fa-solid fa-phone"></i>
-                            <input type="tel" id="login-phone" placeholder="अपना रजिस्टर्ड नंबर दर्ज करें" required>
+                            <input type="tel" id="login-phone" placeholder="रजिस्टर्ड नंबर दर्ज करें" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>पासवर्ड</label>
                         <div class="input-box">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" id="login-pass" placeholder="अपना पासवर्ड दर्ज करें" required>
+                            <input type="password" id="login-pass" placeholder="पासवर्ड दर्ज करें" required>
                         </div>
                     </div>
                     <button type="submit" class="submit-btn"><i class="fa-solid fa-right-to-bracket"></i> लॉगिन करें</button>
@@ -295,7 +308,7 @@
                     <button type="submit" class="submit-btn"><i class="fa-solid fa-user-plus"></i> रजिस्टर करें</button>
                 </form>
 
-                <div style="text-align: center; margin-top: 15px; font-size: 12px; color: #777;">
+                <div style="text-align: center; margin-top: 12px; font-size: 12px; color: #666;">
                     Contact Admin: <b>7052724014</b>
                 </div>
             </div>
@@ -307,17 +320,17 @@
                 <h3 id="welcome-user">स्वागत है!</h3>
                 <button class="logout-btn" onclick="handleLogout()"><i class="fa-solid fa-power-off"></i> लॉग आउट</button>
             </div>
-            <p style="font-size: 13px; color: #555; margin-bottom: 15px;">आपकी आईडी एक्टिव है। नीचे उपलब्ध सेवाएं देखें:</p>
+            <p style="font-size: 12px; color: #555; margin-bottom: 10px;">किसी भी सर्विस पर क्लिक करें, सीधा WhatsApp पर एडमिन से जुड़ें:</p>
             
             <div class="service-grid">
-                <div class="service-card">🚗 ड्राइविंग लाइसेंस PDF</div>
-                <div class="service-card">🆔 वोटर कार्ड ओरिजिनल</div>
-                <div class="service-card">📜 राशन कार्ड PDF</div>
-                <div class="service-card">🏥 आयुष्मान कार्ड सर्विस</div>
-                <div class="service-card">🚙 गाड़ी RC PDF</div>
-                <div class="service-card">📝 पैन कार्ड अप्लाई</div>
-                <div class="service-card">💉 वैक्सीन सर्टिफिकेट</div>
-                <div class="service-card">⚡ 5G स्पीड ऑल वर्क</div>
+                <div class="service-card" onclick="openService('ड्राइविंग लाइसेंस PDF')">🚗 ड्राइविंग लाइसेंस PDF</div>
+                <div class="service-card" onclick="openService('वोटर कार्ड ओरिजिनल')">🆔 वोटर कार्ड ओरिजिनल</div>
+                <div class="service-card" onclick="openService('राशन कार्ड PDF')">📜 राशन कार्ड PDF</div>
+                <div class="service-card" onclick="openService('आयुष्मान कार्ड सर्विस')">🏥 आयुष्मान कार्ड सर्विस</div>
+                <div class="service-card" onclick="openService('गाड़ी RC PDF')">🚙 गाड़ी RC PDF</div>
+                <div class="service-card" onclick="openService('पैन कार्ड अप्लाई')">📝 पैन कार्ड अप्लाई</div>
+                <div class="service-card" onclick="openService('वैक्सीन सर्टिफिकेट')">💉 वैक्सीन सर्टिफिकेट</div>
+                <div class="service-card" onclick="openService('5G स्पीड ऑल वर्क')">⚡ 5G स्पीड ऑल वर्क</div>
             </div>
         </div>
     </div>
@@ -358,18 +371,16 @@
 
             let users = JSON.parse(localStorage.getItem('pawan_users')) || [];
 
-            // Check if user already exists
             const existingUser = users.find(u => u.phone === phone);
             if (existingUser) {
                 showAlert('यह मोबाइल नंबर पहले से रजिस्टर्ड है!', 'error');
                 return;
             }
 
-            // Save new user
             users.push({ name, phone, pass });
             localStorage.setItem('pawan_users', JSON.stringify(users));
 
-            showAlert('रजिस्ट्रेशन सफल रहा! अब आप लॉगिन कर सकते हैं।', 'success');
+            showAlert('रजिस्ट्रेशन सफल रहा! अब लॉगिन करें।', 'success');
             document.getElementById('register-form').reset();
             switchTab('login');
         }
@@ -381,7 +392,6 @@
             const pass = document.getElementById('login-pass').value;
 
             let users = JSON.parse(localStorage.getItem('pawan_users')) || [];
-
             const user = users.find(u => u.phone === phone && u.pass === pass);
 
             if (user) {
@@ -406,7 +416,14 @@
             switchTab('login');
         }
 
-        // Check if already logged in on page load
+        // Service Click Function - Connects directly to WhatsApp
+        function openService(serviceName) {
+            const adminNumber = "917052724014";
+            const message = `Hello Admin, mujhe "${serviceName}" ka kaam karwana hai. Please help!`;
+            const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
         window.onload = function() {
             const loggedInUser = JSON.parse(localStorage.getItem('logged_in_user'));
             if (loggedInUser) {
