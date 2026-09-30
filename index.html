@@ -1,158 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center - Digital & Cyber Services</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#075985">
+<meta name="description" content="Pawan Online Center - Jafarganj, Fatehpur">
+<title>Pawan Online Center | Jafarganj Fatehpur</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ background:#f1f5f9;
+ color:#172033;
+ line-height:1.5;
+}
+header{
+ background:linear-gradient(135deg,#075985,#2563eb,#7c3aed);
+ color:white;
+ padding:25px 15px;
+ text-align:center;
+}
+.logo{
+ width:72px;height:72px;border-radius:50%;
+ background:white;color:#075985;
+ display:flex;align-items:center;justify-content:center;
+ font-size:42px;font-weight:bold;
+ margin:auto;
+ box-shadow:0 5px 20px #0004;
+}
+header h1{margin-top:10px;font-size:30px}
+header p{margin:5px 0}
+.badge{
+ display:inline-block;background:#ffffff22;
+ border:1px solid #ffffff55;
+ padding:6px 12px;border-radius:20px;
+ margin-top:8px;font-size:13px;
+}
+
+.container{max-width:1200px;margin:auto;padding:15px}
+
+.notice{
+ background:#fff7ed;
+ border-left:5px solid #f97316;
+ padding:14px;
+ border-radius:10px;
+ margin:15px 0;
+}
+
+.search{
+ width:100%;
+ padding:15px;
+ border:2px solid #dbeafe;
+ border-radius:12px;
+ font-size:16px;
+ outline:none;
+ margin-bottom:15px;
+}
+.search:focus{border-color:#2563eb}
+
+.filters{
+ display:flex;gap:8px;overflow-x:auto;
+ padding-bottom:12px;
+}
+.filters button{
+ border:0;background:#fff;
+ padding:10px 15px;border-radius:25px;
+ white-space:nowrap;cursor:pointer;
+ box-shadow:0 2px 8px #0001;
+}
+.filters button.active{
+ background:#2563eb;color:white;
+}
+
+.section-title{
+ margin:22px 0 12px;
+ color:#0f172a;
+ font-size:22px;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:13px;
+}
+
+.card{
+ background:white;
+ border-radius:15px;
+ padding:17px;
+ box-shadow:0 4px 15px #00000012;
+ border:1px solid #e5e7eb;
+ transition:.2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0002}
+.icon{
+ font-size:30px;
+ margin-bottom:8px;
+}
+.card h3{font-size:17px;margin-bottom:5px}
+.card p{font-size:13px;color:#64748b;margin-bottom:12px}
+.btn{
+ display:inline-block;
+ text-decoration:none;
+ background:#2563eb;
+ color:white;
+ padding:9px 13px;
+ border-radius:8px;
+ font-size:13px;
+}
+.btn.green{background:#16a34a}
+
+.bank{
+ border-top:4px solid #2563eb;
+}
+
+.contact{
+ margin-top:25px;
+ background:linear-gradient(135deg,#0f172a,#1e3a8a);
+ color:white;
+ border-radius:18px;
+ padding:25px;
+ text-align:center;
+}
+.contact h2{margin-bottom:8px}
+.contact a{
+ display:inline-block;
+ margin:8px 4px;
+ padding:12px 18px;
+ border-radius:10px;
+ text-decoration:none;
+ color:white;
+ background:#16a34a;
+}
+.contact a.call{background:#2563eb}
+
+footer{
+ margin-top:20px;
+ padding:20px;
+ text-align:center;
+ background:#0f172a;
+ color:#cbd5e1;
+ font-size:13px;
+}
+
+.float{
+ position:fixed;
+ right:15px;
+ bottom:15px;
+ display:flex;
+ flex-direction:column;
+ gap:8px;
+ z-index:99;
+}
+.float a{
+ width:52px;height:52px;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ color:white;
+ text-decoration:none;
+ font-size:24px;
+ box-shadow:0 4px 12px #0004;
+}
+.wa{background:#16a34a}
+.ph{background:#2563eb}
+
+.hidden{display:none!important}
+
+@media(max-width:600px){
+ header h1{font-size:24px}
+ .grid{grid-template-columns:1fr 1fr;gap:9px}
+ .card{padding:13px}
+ .card h3{font-size:15px}
+ .icon{font-size:25px}
+ .btn{font-size:12px;padding:8px 10px}
+}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- Navbar -->
-    <nav class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-laptop-code text-2xl"></i>
-                <span class="text-xl font-bold tracking-wide">Pawan Online Center</span>
-            </div>
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="#home" class="hover:text-yellow-300 transition">Home</a>
-                <a href="#services" class="hover:text-yellow-300 transition">Services</a>
-                <a href="#about" class="hover:text-yellow-300 transition">About Us</a>
-                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
-            </div>
-            <a href="#contact" class="bg-yellow-400 text-blue-900 px-4 py-2 rounded-lg font-semibold shadow hover:bg-yellow-300 transition">Get in Touch</a>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero Section -->
-    <header id="home" class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Your One-Stop Digital & Online Services Hub</h1>
-            <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto mb-8">Fast, reliable, and secure online form filling, printing, government documentation, and financial services.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#services" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-yellow-300 transition">Explore Services</a>
-                <a href="#contact" class="border border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition">Contact Us</a>
-            </div>
-        </div>
-    </header>
+<header>
+ <div class="logo">P</div>
+ <h1>पवन ऑनलाइन सेंटर</h1>
+ <p>Pawan Online Center</p>
+ <p>📍 Jafarganj, Fatehpur (U.P.)</p>
+ <span class="badge">सभी Online Services एक ही जगह</span>
+</header>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-blue-900">Our Services</h2>
-            <p class="text-gray-600 mt-2">We provide a wide range of essential digital and paperwork solutions.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service 1 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-file-pen"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Online Form Filling</h3>
-                <p class="text-gray-600">Assistance with job applications, university admissions, scholarship forms, and government exams.</p>
-            </div>
-            <!-- Service 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-id-card"></i></div>
-                <h3 class="text-xl font-semibold mb-2">PAN & Aadhaar Services</h3>
-                <p class="text-gray-600">New PAN card applications, updates, corrections, printouts, and digital linking support.</p>
-            </div>
-            <!-- Service 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-print"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Printing & Xerox</h3>
-                <p class="text-gray-600">High-speed color and black & white printouts, document scanning, lamination, and spiral binding.</p>
-            </div>
-            <!-- Service 4 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-money-bill-transfer"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Money Transfer & AEPS</h3>
-                <p class="text-gray-600">Secure cash withdrawals, mini-statements, Aadhaar Pay, and domestic money transfers.</p>
-            </div>
-            <!-- Service 5 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-train"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Ticket Booking</h3>
-                <p class="text-gray-600">IRCTC train ticket bookings, flight tickets, and bus reservation services done instantly.</p>
-            </div>
-            <!-- Service 6 -->
-            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-xl transition">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-camera"></i></div>
-                <h3 class="text-xl font-semibold mb-2">Passport Photos & DTP</h3>
-                <p class="text-gray-600">Instant passport-size photographs, professional resume creation, and document formatting.</p>
-            </div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- About Section -->
-    <section id="about" class="bg-blue-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold text-blue-900 mb-4">Why Choose Pawan Online Center?</h2>
-                <p class="text-gray-700 mb-6">We strive to provide seamless digital assistance to our community. With quick turnaround times, transparent pricing, and expert guidance through complex online portals, we make technology work for you.</p>
-                <ul class="space-y-3">
-                    <li class="flex items-center space-x-3 text-gray-700"><i class="fa-solid fa-circle-check text-blue-600"></i><span>Fast & Accurate Form Filling</span></li>
-                    <li class="flex items-center space-x-3 text-gray-700"><i class="fa-solid fa-circle-check text-blue-600"></i><span>Affordable Rates for All Services</span></li>
-                    <li class="flex items-center space-x-3 text-gray-700"><i class="fa-solid fa-circle-check text-blue-600"></i><span>Experienced & Helpful Support Staff</span></li>
-                </ul>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border border-blue-100">
-                <h3 class="text-2xl font-bold text-blue-900 mb-4">Business Hours</h3>
-                <div class="space-y-2 text-gray-600">
-                    <p class="flex justify-between border-b pb-2"><span>Monday - Saturday:</span> <span class="font-semibold text-gray-800">9:00 AM - 8:00 PM</span></p>
-                    <p class="flex justify-between border-b pb-2"><span>Sunday:</span> <span class="font-semibold text-gray-800">10:00 AM - 2:00 PM</span></p>
-                </div>
-                <div class="mt-6 bg-blue-600 text-white p-4 rounded-xl text-center">
-                    <p class="text-sm">Need urgent help or inquiry?</p>
-                    <p class="text-lg font-bold mt-1"><i class="fa-solid fa-phone mr-2"></i> +91 98765 43210</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="notice">
+ <b>⚠️ महत्वपूर्ण सूचना:</b>
+ यह एक निजी सहायता पोर्टल है। यह किसी सरकारी विभाग या बैंक की आधिकारिक वेबसाइट नहीं है।
+ Aadhaar OTP, PIN, Password, Fingerprint या बैंक Login details इस वेबसाइट पर दर्ज न करें।
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-blue-900">Contact Us</h2>
-            <p class="text-gray-600 mt-2">Visit our center or drop us a message for any inquiries.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
-                <h3 class="text-xl font-bold mb-4 text-blue-900">Get in Touch</h3>
-                <div class="space-y-4 text-gray-700">
-                    <p class="flex items-start space-x-3"><i class="fa-solid fa-location-dot text-blue-600 mt-1"></i><span>Main Road, Near Post Office, Local Market, India</span></p>
-                    <p class="flex items-center space-x-3"><i class="fa-solid fa-phone text-blue-600"></i><span>+91 98765 43210</span></p>
-                    <p class="flex items-center space-x-3"><i class="fa-solid fa-envelope text-blue-600"></i><span>support@pawanonlinecenter.com</span></p>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
-                <form onsubmit="event.preventDefault(); alert('Message sent successfully!');" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                        <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input type="tel" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your phone number">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea rows="3" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="How can we help you?"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<input id="search" class="search"
+ placeholder="🔎 सेवा खोजें... जैसे Aadhaar, PAN, Voter, Bank">
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p>&copy; 2026 Pawan Online Center. All Rights Reserved.</p>
-            <p class="text-sm text-gray-400 mt-1">Designed for fast and easy web deployment.</p>
-        </div>
-    </footer>
+<div class="filters">
+ <button class="active" onclick="filterCards('all',this)">सभी</button>
+ <button onclick="filterCards('aadhaar',this)">🪪 Aadhaar</button>
+ <button onclick="filterCards('gov',this)">🏛️ Government</button>
+ <button onclick="filterCards('vehicle',this)">🚗 Vehicle</button>
+ <button onclick="filterCards('student',this)">🎓 Student</button>
+ <button onclick="filterCards('bank',this)">🏦 Banking</button>
+ <button onclick="filterCards('print',this)">🖨️ Print</button>
+</div>
+
+<h2 class="section-title">⭐ Online Services</h2>
+
+<div id="services" class="grid">
+
+<div class="card aadhaar"><div class="icon">🪪</div><h3>Aadhaar e-PDF Download</h3><p>Official Aadhaar download</p><a class="btn" href="https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">🪪</div><h3>Masked Aadhaar</h3><p>Masked Aadhaar service</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">📱</div><h3>Aadhaar Mobile Update</h3><p>Update information</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">🏠</div><h3>Aadhaar Address Update</h3><p>Address update assistance</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">🔐</div><h3>Aadhaar Lock / Unlock</h3><p>Official UIDAI service</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">🔍</div><h3>Aadhaar Authentication History</h3><p>Check authentication history</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">🆔</div><h3>VID Generate</h3><p>Virtual ID service</p><a class="btn" href="https://myaadhaar.uidai.gov.in/" target="_blank">Open</a></div>
+
+<div class="card aadhaar"><div class="icon">👆</div><h3>Fingerprint से Aadhaar Print</h3><p>केवल अधिकृत Aadhaar operator/client द्वारा</p><a class="btn" href="https://uidai.gov.in/hi/enrolment-and-update" target="_blank">UIDAI Info</a></div>
+
+<div class="card gov"><div class="icon">🗳️</div><h3>Voter New Registration</h3><p>New voter registration</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🗳️</div><h3>Voter Correction</h3><p>Voter details correction</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">📄</div><h3>e-EPIC Download</h3><p>Digital voter card</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🔎</div><h3>Voter Search</h3><p>Search voter details</p><a class="btn" href="https://voters.eci.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">💳</div><h3>PAN Apply / Services</h3><p>PAN related assistance</p><a class="btn" href="https://www.incometax.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🔗</div><h3>PAN Aadhaar Services</h3><p>PAN-Aadhaar related services</p><a class="btn" href="https://www.incometax.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">📑</div><h3>DigiLocker</h3><p>Digital documents</p><a class="btn" href="https://www.digilocker.gov.in/" target="_blank">Open</a></div>
+
+<div class="card vehicle"><div class="icon">🚗</div><h3>Driving Licence</h3><p>DL online services</p><a class="btn" href="https://sarathi.parivahan.gov.in/" target="_blank">Open</a></div>
+
+<div class="card vehicle"><div class="icon">🚘</div><h3>Vehicle RC</h3><p>Registration services</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
+
+<div class="card vehicle"><div class="icon">🔎</div><h3>Vehicle Details</h3><p>Vehicle information</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
+
+<div class="card vehicle"><div class="icon">🌱</div><h3>Pollution / PUC</h3><p>PUC related service</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
+
+<div class="card vehicle"><div class="icon">💰</div><h3>Vehicle Tax / Fees</h3><p>Vehicle tax assistance</p><a class="btn" href="https://parivahan.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🍚</div><h3>Ration Card Services</h3><p>NFSA related services</p><a class="btn" href="https://nfsa.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🏥</div><h3>Ayushman Beneficiary</h3><p>Beneficiary portal</p><a class="btn" href="https://beneficiary.nha.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">💉</div><h3>COVID Certificate</h3><p>Official certificate portal</p><a class="btn" href="https://www.cowin.gov.in/" target="_blank">Open</a></div>
+
+<div class="card student"><div class="icon">🎓</div><h3>UP Scholarship</h3><p>Scholarship portal</p><a class="btn" href="https://scholarship.up.gov.in/" target="_blank">Open</a></div>
+
+<div class="card student"><div class="icon">📚</div><h3>Student Online Services</h3><p>Student assistance</p><a class="btn" href="https://scholarship.up.gov.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">💼</div><h3>Rojgaar Sangam</h3><p>Employment services</p><a class="btn" href="https://rojgaarsangam.up.gov.in/home" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">👷</div><h3>NREGA / Job Card</h3><p>MGNREGA services</p><a class="btn" href="https://nrega.nic.in/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🏛️</div><h3>UP e-District</h3><p>Government certificates</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">💵</div><h3>Income Certificate</h3><p>Income certificate assistance</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">🏠</div><h3>Residence Certificate</h3><p>Domicile certificate</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
+
+<div class="card gov"><div class="icon">📜</div><h3>Caste Certificate</h3><p>Caste certificate</p><a class="btn" href="https://edistrict.up.gov.in/edistrictup/" target="_blank">Open</a></div>
+
+<div class="card print"><div class="icon">🖨️</div><h3>PDF Print</h3><p>Document printing</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
+
+<div class="card print"><div class="icon">📷</div><h3>Photo Print</h3><p>Photo printing service</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
+
+<div class="card print"><div class="icon">📄</div><h3>Photocopy</h3><p>Black & white photocopy</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
+
+<div class="card print"><div class="icon">🌈</div><h3>Color Print</h3><p>Color document printing</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
+
+<div class="card print"><div class="icon">🪪</div><h3>ID Card Print</h3><p>ID card printing</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
+
+<div class="card print"><div class="icon">📝</div><h3>Online Form Filling</h3><p>Online form assistance</p><a class="btn green" href="tel:+917052724014">Contact</a></div>
+
+</div>
+
+<h2 class="section-title">🏦 Banking / BC / CSP / Kiosk</h2>
+
+<div class="notice">
+ <b>🔐 Banking Security:</b>
+ नीचे दिए गए लिंक केवल संबंधित बैंक की official website पर ले जाते हैं।
+ अपना Bank Password, ATM PIN, OTP या biometric किसी अनधिकृत व्यक्ति/वेबसाइट को न दें।
+</div>
+
+<div id="banks" class="grid">
+
+<div class="card bank"><div class="icon">🏦</div><h3>State Bank of India</h3><p>SBI Official Portal</p><a class="btn" href="https://sbi.co.in/" target="_blank">Open SBI</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Bank of Baroda</h3><p>Official Bank Portal</p><a class="btn" href="https://www.bankofbaroda.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Bank of India</h3><p>Official Bank Portal</p><a class="btn" href="https://bankofindia.co.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Bank of Maharashtra</h3><p>Official Bank Portal</p><a class="btn" href="https://bankofmaharashtra.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Canara Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.canarabank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Central Bank of India</h3><p>Official Bank Portal</p><a class="btn" href="https://centralbank.bank.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Indian Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.indianbank.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Indian Overseas Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.iob.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Punjab National Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.pnbindia.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Punjab & Sind Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://punjabandsindbank.co.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Union Bank of India</h3><p>Official Bank Portal</p><a class="btn" href="https://www.unionbankofindia.co.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>UCO Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.ucobank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Axis Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.axisbank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Bandhan Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://bandhanbank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Federal Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.federalbank.co.in/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>HDFC Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.hdfcbank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>ICICI Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.icicibank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>IDFC FIRST Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.idfcfirstbank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>IndusInd Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.indusind.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>Kotak Mahindra Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.kotak.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>RBL Bank</h3><p>Official Bank Portal</p><a class="btn" href="https://www.rblbank.com/" target="_blank">Open</a></div>
+
+<div class="card bank"><div class="icon">🏦</div><h3>YES BANK</h3><p>Official Bank Portal</p><a class="btn" href="https://www.yesbank.in/" target="_blank">Open</a></div>
+
+</div>
+
+<div class="contact">
+ <h2>📞 पवन ऑनलाइन सेंटर</h2>
+ <p>Jafarganj, Fatehpur (U.P.)</p>
+ <p>Online Form • Print • Aadhaar Assistance • Digital Services</p>
+ <a class="call" href="tel:+917052724014">📞 Call: 7052724014</a>
+ <a href="https://wa.me/917052724014" target="_blank">💬 WhatsApp</a>
+</div>
+
+</div>
+
+<footer>
+ © 2026 Pawan Online Center • Jafarganj, Fatehpur, U.P.<br>
+ Private Assistance Portal • Not a Government Website
+</footer>
+
+<div class="float">
+ <a class="wa" href="https://wa.me/917052724014" target="_blank">💬</a>
+ <a class="ph" href="tel:+917052724014">📞</a>
+</div>
+
+<script>
+const search=document.getElementById("search");
+
+search.addEventListener("input",function(){
+ const q=this.value.toLowerCase();
+ document.querySelectorAll("#services .card,#banks .card").forEach(card=>{
+   card.classList.toggle("hidden",!card.innerText.toLowerCase().includes(q));
+ });
+});
+
+function filterCards(type,button){
+ document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
+ button.classList.add("active");
+
+ document.querySelectorAll("#services .card").forEach(card=>{
+   if(type==="all" || card.classList.contains(type))
+     card.classList.remove("hidden");
+   else
+     card.classList.add("hidden");
+ });
+
+ if(type==="bank"){
+   document.querySelectorAll("#services .card").forEach(c=>c.classList.add("hidden"));
+   document.querySelectorAll("#banks .card").forEach(c=>c.classList.remove("hidden"));
+ }else{
+   document.querySelectorAll("#banks .card").forEach(c=>c.classList.remove("hidden"));
+ }
+}
+</script>
 
 </body>
 </html>
