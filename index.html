@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center - All India Online Service</title>
+    <title>Pawan Online Center - Portal</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -35,20 +35,14 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             width: 100%;
-            max-width: 450px;
+            max-width: 480px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.5);
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .container:hover {
-            transform: translateY(-5px);
         }
 
         .form-header {
@@ -56,14 +50,12 @@
             color: white;
             padding: 25px 20px;
             text-align: center;
-            position: relative;
         }
 
         .form-header h2 {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
             margin-bottom: 5px;
-            letter-spacing: 0.5px;
         }
 
         .form-header p {
@@ -109,7 +101,6 @@
 
         .form-group {
             margin-bottom: 18px;
-            position: relative;
         }
 
         .form-group label {
@@ -167,7 +158,6 @@
 
         .submit-btn:hover {
             background: linear-gradient(135deg, #5a6fd6, #683d94);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
             transform: translateY(-2px);
         }
 
@@ -177,105 +167,170 @@
 
         .form-section.active {
             display: block;
-            animation: fadeIn 0.5s ease;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Dashboard Styles */
+        #dashboard-section {
+            display: none;
+            padding: 25px;
         }
 
-        .footer-note {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #777;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
 
-        .footer-note span {
-            color: #ff416c;
+        .dashboard-header h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .logout-btn {
+            background: #ff416c;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
             font-weight: 600;
         }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            border: 1px solid #e1e1e1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .alert-msg {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            text-align: center;
+            display: none;
+        }
+
+        .alert-success { background: #d4edda; color: #155724; }
+        .alert-error { background: #f8d7da; color: #721c24; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
-        .
-        <div class="form-header">
-            <h2>Pawan Online Center</h2>
-            <p><i class="fa-solid fa-bolt"></i> All India Online Service Available</p>
+    <div class="container" id="main-container">
+        <!-- Auth View -->
+        <div id="auth-view">
+            <div class="form-header">
+                <h2>Pawan Online Center</h2>
+                <p><i class="fa-solid fa-bolt"></i> All India Online Service Available</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('login')">लॉगिन (Login)</button>
+                <button class="tab-btn" onclick="switchTab('register')">रजिस्टर (Register)</button>
+            </div>
+
+            <div class="form-body">
+                <div id="alert-box" class="alert-msg"></div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="form-section active" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label>मोबाइल नंबर</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="login-phone" placeholder="अपना रजिस्टर्ड नंबर दर्ज करें" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>पासवर्ड</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="login-pass" placeholder="अपना पासवर्ड दर्ज करें" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-right-to-bracket"></i> लॉगिन करें</button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="register-form" class="form-section" onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label>पूरा नाम</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="reg-name" placeholder="अपना पूरा नाम दर्ज करें" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>मोबाइल नंबर (WhatsApp)</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="reg-phone" placeholder="10 अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>पासवर्ड बनाएं</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" id="reg-pass" placeholder="नया पासवर्ड बनाएं" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-user-plus"></i> रजिस्टर करें</button>
+                </form>
+
+                <div style="text-align: center; margin-top: 15px; font-size: 12px; color: #777;">
+                    Contact Admin: <b>7052724014</b>
+                </div>
+            </div>
         </div>
 
-        <!-- Tabs -->
-        <div class="tab-buttons">
-            <button class="tab-btn active" onclick="switchTab('login')">लॉगिन (Login)</button>
-            <button class="tab-btn" onclick="switchTab('register')">रजिस्टर (Register)</button>
-        </div>
-
-        <div class="form-body">
-            <!-- Login Form -->
-            <form id="login-form" class="form-section active" onsubmit="handleLogin(event)">
-                <div class="form-group">
-                    <label>मोबाइल नंबर या ईमेल</label>
-                    <div class="input-box">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="अपना रजिस्टर्ड नंबर दर्ज करें" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>पासवर्ड</label>
-                    <div class="input-box">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="अपना पासवर्ड दर्ज करें" required>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn"><i class="fa-solid fa-right-to-bracket"></i> लॉगिन करें</button>
-            </form>
-
-            <!-- Register Form -->
-            <form id="register-form" class="form-section" onsubmit="handleRegister(event)">
-                <div class="form-group">
-                    <label>पूरा नाम (Full Name)</label>
-                    <div class="input-box">
-                        <i class="fa-solid id-card"></i>
-                        <input type="text" placeholder="अपना पूरा नाम दर्ज करें" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>मोबाइल नंबर (WhatsApp Number)</label>
-                    <div class="input-box">
-                        <i class="fa-solid fa-phone"></i>
-                        <input type="tel" placeholder="10 अंकों का मोबाइल नंबर" pattern="[0-9]{10}" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>ईमेल आईडी</label>
-                    <div class="input-box">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="email@example.com" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>पासवर्ड बनाएं</label>
-                    <div class="input-box">
-                        <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="मजबूत पासवर्ड बनाएं" required>
-                    </div>
-                </div>
-                <button type="submit" class="submit-btn"><i class="fa-solid fa-user-plus"></i> रजिस्टर करें</button>
-            </form>
-
-            <div class="footer-note">
-                Contact Admin: <span>+91 7052724014</span>
+        <!-- Dashboard View (After Login) -->
+        <div id="dashboard-section">
+            <div class="dashboard-header">
+                <h3 id="welcome-user">स्वागत है!</h3>
+                <button class="logout-btn" onclick="handleLogout()"><i class="fa-solid fa-power-off"></i> लॉग आउट</button>
+            </div>
+            <p style="font-size: 13px; color: #555; margin-bottom: 15px;">आपकी आईडी एक्टिव है। नीचे उपलब्ध सेवाएं देखें:</p>
+            
+            <div class="service-grid">
+                <div class="service-card">🚗 ड्राइविंग लाइसेंस PDF</div>
+                <div class="service-card">🆔 वोटर कार्ड ओरिजिनल</div>
+                <div class="service-card">📜 राशन कार्ड PDF</div>
+                <div class="service-card">🏥 आयुष्मान कार्ड सर्विस</div>
+                <div class="service-card">🚙 गाड़ी RC PDF</div>
+                <div class="service-card">📝 पैन कार्ड अप्लाई</div>
+                <div class="service-card">💉 वैक्सीन सर्टिफिकेट</div>
+                <div class="service-card">⚡ 5G स्पीड ऑल वर्क</div>
             </div>
         </div>
     </div>
 
     <script>
+        function showAlert(message, type) {
+            const alertBox = document.getElementById('alert-box');
+            alertBox.innerText = message;
+            alertBox.className = `alert-msg ${type === 'success' ? 'alert-success' : 'alert-error'}`;
+            alertBox.style.display = 'block';
+            setTimeout(() => { alertBox.style.display = 'none'; }, 4000);
+        }
+
         function switchTab(tabName) {
             const loginForm = document.getElementById('login-form');
             const registerForm = document.getElementById('register-form');
@@ -294,14 +349,69 @@
             }
         }
 
-        function handleLogin(event) {
-            event.preventDefault();
-            alert('लॉगिन सफल रहा! (Pawan Online Center)');
-        }
-
+        // Register Function
         function handleRegister(event) {
             event.preventDefault();
-            alert('रजिस्ट्रेशन सफल रहा! आपकी आईडी क्रिएट हो गई है।');
+            const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
+            const pass = document.getElementById('reg-pass').value;
+
+            let users = JSON.parse(localStorage.getItem('pawan_users')) || [];
+
+            // Check if user already exists
+            const existingUser = users.find(u => u.phone === phone);
+            if (existingUser) {
+                showAlert('यह मोबाइल नंबर पहले से रजिस्टर्ड है!', 'error');
+                return;
+            }
+
+            // Save new user
+            users.push({ name, phone, pass });
+            localStorage.setItem('pawan_users', JSON.stringify(users));
+
+            showAlert('रजिस्ट्रेशन सफल रहा! अब आप लॉगिन कर सकते हैं।', 'success');
+            document.getElementById('register-form').reset();
+            switchTab('login');
+        }
+
+        // Login Function
+        function handleLogin(event) {
+            event.preventDefault();
+            const phone = document.getElementById('login-phone').value;
+            const pass = document.getElementById('login-pass').value;
+
+            let users = JSON.parse(localStorage.getItem('pawan_users')) || [];
+
+            const user = users.find(u => u.phone === phone && u.pass === pass);
+
+            if (user) {
+                localStorage.setItem('logged_in_user', JSON.stringify(user));
+                showDashboard(user.name);
+            } else {
+                showAlert('गलत मोबाइल नंबर या पासवर्ड!', 'error');
+            }
+        }
+
+        function showDashboard(name) {
+            document.getElementById('auth-view').style.display = 'none';
+            document.getElementById('dashboard-section').style.display = 'block';
+            document.getElementById('welcome-user').innerText = `स्वागत है, ${name}!`;
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('logged_in_user');
+            document.getElementById('dashboard-section').style.display = 'none';
+            document.getElementById('auth-view').style.display = 'block';
+            document.getElementById('login-form').reset();
+            switchTab('login');
+        }
+
+        // Check if already logged in on page load
+        window.onload = function() {
+            const loggedInUser = JSON.parse(localStorage.getItem('logged_in_user'));
+            if (loggedInUser) {
+                showDashboard(loggedInUser.name);
+            }
         }
     </script>
 
