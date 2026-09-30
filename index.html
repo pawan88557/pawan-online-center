@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center - Dashboard</title>
+    <title>Pawan Online Center - Auto Service Portal</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -18,28 +18,27 @@
         }
 
         body {
-            background-color: #f4f6f9;
+            background-color: #f1f5f9;
             display: flex;
             height: 100vh;
             overflow: hidden;
         }
 
-        /* Sidebar Styles */
+        /* Sidebar */
         .sidebar {
             width: 260px;
-            background-color: #1e293b;
-            color: #cbd5e1;
+            background-color: #0f172a;
+            color: #94a3b8;
             display: flex;
             flex-direction: column;
-            transition: all 0.3s ease;
             z-index: 100;
         }
 
         .sidebar-brand {
             padding: 20px;
-            background: #0f172a;
+            background: #1e293b;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             display: flex;
             align-items: center;
@@ -47,9 +46,7 @@
             border-bottom: 1px solid #334155;
         }
 
-        .sidebar-brand i {
-            color: #38bdf8;
-        }
+        .sidebar-brand i { color: #38bdf8; }
 
         .sidebar-menu {
             list-style: none;
@@ -58,17 +55,10 @@
             flex-grow: 1;
         }
 
-        .sidebar-menu::-webkit-scrollbar {
-            width: 5px;
-        }
-        .sidebar-menu::-webkit-scrollbar-thumb {
-            background: #475569;
-            border-radius: 5px;
-        }
+        .sidebar-menu::-webkit-scrollbar { width: 4px; }
+        .sidebar-menu::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
 
-        .sidebar-menu li {
-            margin-bottom: 5px;
-        }
+        .sidebar-menu li { margin-bottom: 5px; }
 
         .sidebar-menu a {
             display: flex;
@@ -77,35 +67,31 @@
             padding: 12px 15px;
             color: #94a3b8;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             border-radius: 8px;
             transition: all 0.3s;
+            cursor: pointer;
         }
 
         .sidebar-menu a:hover, .sidebar-menu a.active {
-            background-color: #3b82f6;
+            background-color: #2563eb;
             color: white;
         }
 
-        .sidebar-menu a i {
-            font-size: 16px;
-            width: 20px;
-            text-align: center;
-        }
+        .sidebar-menu a i { width: 20px; text-align: center; }
 
-        /* Main Content Area */
+        /* Main Content */
         .main-content {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            position: relative;
         }
 
         /* Top Navbar */
         .top-navbar {
-            height: 70px;
+            height: 65px;
             background: white;
             border-bottom: 1px solid #e2e8f0;
             display: flex;
@@ -115,115 +101,147 @@
         }
 
         .user-welcome {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             color: #334155;
         }
 
         .top-badges {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             align-items: center;
         }
 
         .badge-box {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 15px;
-            border-radius: 8px;
-            font-size: 13px;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 600;
             color: white;
         }
 
-        .badge-speed {
-            background: linear-gradient(135deg, #0ea5e9, #2563eb);
-        }
-
-        .badge-wallet {
-            background: linear-gradient(135deg, #10b981, #059669);
-        }
+        .badge-speed { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
+        .badge-wallet { background: linear-gradient(135deg, #10b981, #059669); }
 
         /* Dashboard Body */
         .dashboard-body {
             flex-grow: 1;
-            padding: 25px;
+            padding: 20px;
             overflow-y: auto;
             background: #f8fafc;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
         }
 
         .service-card {
             background: white;
             border: 1px solid #e2e8f0;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .service-card:hover {
-            transform: translateY(-3px);
-            border-color: #3b82f6;
-            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+            border-color: #2563eb;
+            box-shadow: 0 8px 15px -3px rgba(37, 99, 235, 0.1);
         }
 
         .service-card i {
-            font-size: 28px;
-            color: #3b82f6;
-            margin-bottom: 10px;
+            font-size: 24px;
+            color: #2563eb;
+            margin-bottom: 8px;
         }
 
         .service-card h4 {
-            font-size: 14px;
+            font-size: 13px;
             color: #1e293b;
             font-weight: 600;
+        }
+
+        /* Auto Service Modal Form */
+        #auto-form-modal {
+            display: none;
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 4px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .auto-btn {
+            width: 100%;
+            padding: 11px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .auto-btn:hover { background: #059669; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 12px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
         }
 
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            bottom: 20px;
+            right: 20px;
             background-color: #25d366;
             color: white;
-            padding: 10px 18px;
+            padding: 8px 16px;
             border-radius: 30px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            transition: transform 0.3s;
             z-index: 1000;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.05);
-        }
-
-        .whatsapp-float i {
-            font-size: 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 70px;
-            }
-            .sidebar-brand span, .sidebar-menu span {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -232,19 +250,17 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="sidebar-brand">
-            <i class="fa-solid fa-layer-group"></i>
-            <span>PRINT PORTAL</span>
+            <i class="fa-solid fa-bolt"></i>
+            <span>AUTO 5G PORTAL</span>
         </div>
         <ul class="sidebar-menu">
-            <li><a href="#" class="active"><i class="fa-solid fa-house"></i> <span>डैशबोर्ड (Dashboard)</span></a></li>
-            <li><a href="#" onclick="openService('ड्राइविंग लाइसेंस PDF')"><i class="fa-solid fa-id-card"></i> <span>ड्राइविंग लाइसेंस PDF</span></a></li>
-            <li><a href="#" onclick="openService('वोटर कार्ड ओरिजिनल')"><i class="fa-solid fa-address-card"></i> <span>वोटर कार्ड ओरिजिनल</span></a></li>
-            <li><a href="#" onclick="openService('राशन कार्ड PDF')"><i class="fa-solid fa-file-lines"></i> <span>राशन कार्ड PDF</span></a></li>
-            <li><a href="#" onclick="openService('आयुष्मान कार्ड सर्विस')"><i class="fa-solid fa-briefcase-medical"></i> <span>आयुष्मान सर्विस</span></a></li>
-            <li><a href="#" onclick="openService('गाड़ी RC PDF')"><i class="fa-solid fa-car"></i> <span>गाड़ियों की RC PDF</span></a></li>
-            <li><a href="#" onclick="openService('पैन कार्ड अप्लाई')"><i class="fa-solid fa-id-badge"></i> <span>पैन कार्ड अप्लाई</span></a></li>
-            <li><a href="#" onclick="openService('वैक्सीन सर्टिफिकेट')"><i class="fa-solid fa-syringe"></i> <span>वैक्सीन सर्टिफिकेट</span></a></li>
-            <li><a href="#" onclick="handleLogout()" style="color: #ef4444;"><i class="fa-solid fa-power-off"></i> <span>लॉग आउट</span></a></li>
+            <li><a onclick="showHome()" class="active"><i class="fa-solid fa-house"></i> <span>डैशबोर्ड Home</span></a></li>
+            <li><a onclick="openAutoService('ड्राइविंग लाइसेंस PDF')"><i class="fa-solid fa-id-card"></i> <span>ड्राइविंग लाइसेंस ऑटो</span></a></li>
+            <li><a onclick="openAutoService('वोटर कार्ड ओरिजिनल')"><i class="fa-solid fa-address-card"></i> <span>वोटर कार्ड PDF ऑटो</span></a></li>
+            <li><a onclick="openAutoService('राशन कार्ड PDF')"><i class="fa-solid fa-file-lines"></i> <span>राशन कार्ड ऑटो</span></a></li>
+            <li><a onclick="openAutoService('आयुष्मान कार्ड सर्विस')"><i class="fa-solid fa-hospital-user"></i> <span>आयुष्मान ऑटो अप्रूव</span></a></li>
+            <li><a onclick="openAutoService('गाड़ी RC PDF')"><i class="fa-solid fa-car"></i> <span>गाड़ी RC PDF ऑटो</span></a></li>
+            <li><a onclick="openAutoService('पैन कार्ड अप्लाई')"><i class="fa-solid fa-id-badge"></i> <span>पैन कार्ड ऑटो</span></a></li>
         </ul>
     </div>
 
@@ -253,11 +269,11 @@
         <!-- Top Navbar -->
         <div class="top-navbar">
             <div class="user-welcome">
-                Hello, स्वागत है Pawan Online Center में!
+                Pawan Online Center - Auto Control Panel
             </div>
             <div class="top-badges">
                 <div class="badge-box badge-speed">
-                    <i class="fa-solid fa-bolt"></i> 5G SPEED
+                    <i class="fa-solid fa-bolt"></i> 5G SPEED AUTO
                 </div>
                 <div class="badge-box badge-wallet">
                     <i class="fa-solid fa-wallet"></i> Wallet: ₹205
@@ -265,64 +281,98 @@
             </div>
         </div>
 
-        <!-- Dashboard Body / Services Grid -->
-        <div class="dashboard-body">
-            <p style="margin-bottom: 15px; font-size: 13px; color: #64748b; font-weight: 500;">उपलब्ध ऑनलाइन सेवाएं (किसी पर भी क्लिक करके सीधे WhatsApp पर आर्डर भेजें):</p>
+        <!-- Dashboard Body -->
+        <div class="dashboard-body" id="main-body">
+            <p style="margin-bottom: 12px; font-size: 13px; color: #64748b; font-weight: 600;">ऑटो सर्विस चुनने के लिए नीचे क्लिक करें:</p>
             
-            <div class="services-grid">
-                <div class="service-card" onclick="openService('ड्राइविंग लाइसेंस अप्लाई')">
+            <div class="services-grid" id="service-grid-box">
+                <div class="service-card" onclick="openAutoService('ड्राइविंग लाइसेंस PDF')">
                     <i class="fa-solid fa-id-card"></i>
-                    <h4>ड्राइविंग लाइसेंस अप्लाई</h4>
+                    <h4>ड्राइविंग लाइसेंस PDF</h4>
                 </div>
-                <div class="service-card" onclick="openService('वोटर कार्ड ओरिजिनल PDF')">
+                <div class="service-card" onclick="openAutoService('वोटर कार्ड ओरिजिनल')">
                     <i class="fa-solid fa-address-card"></i>
-                    <h4>वोटर कार्ड ओरिजिनल PDF</h4>
+                    <h4>वोटर कार्ड ओरिजिनल</h4>
                 </div>
-                <div class="service-card" onclick="openService('राशन कार्ड की पीडीऍफ')">
+                <div class="service-card" onclick="openAutoService('राशन कार्ड PDF')">
                     <i class="fa-solid fa-file-lines"></i>
-                    <h4>राशन कार्ड की पीडीऍफ</h4>
+                    <h4>राशन कार्ड PDF</h4>
                 </div>
-                <div class="service-card" onclick="openService('आधार से पैन नंबर')">
-                    <i class="fa-solid fa-fingerprint"></i>
-                    <h4>आधार से पैन नंबर</h4>
-                </div>
-                <div class="service-card" onclick="openService('आयुष्मान पेंडिंग एप्रूव')">
+                <div class="service-card" onclick="openAutoService('आयुष्मान कार्ड सर्विस')">
                     <i class="fa-solid fa-hospital-user"></i>
-                    <h4>आयुष्मान पेंडिंग एप्रूव</h4>
+                    <h4>आयुष्मान कार्ड सर्विस</h4>
                 </div>
-                <div class="service-card" onclick="openService('गाड़ियों की RC PDF')">
-                    <i class="fa-solid fa-car-side"></i>
-                    <h4>गाड़ियों की RC PDF</h4>
+                <div class="service-card" onclick="openAutoService('गाड़ी RC PDF')">
+                    <i class="fa-solid fa-car"></i>
+                    <h4>गाड़ी RC PDF</h4>
                 </div>
-                <div class="service-card" onclick="openService('पैन कार्ड अप्लाई')">
+                <div class="service-card" onclick="openAutoService('पैन कार्ड अप्लाई')">
                     <i class="fa-solid fa-id-badge"></i>
                     <h4>पैन कार्ड अप्लाई</h4>
                 </div>
-                <div class="service-card" onclick="openService('बाइक इन्सुरेंस / प्रदूषण')">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>बाइक इन्सुरेंस / प्रदूषण</h4>
-                </div>
+            </div>
+
+            <!-- Auto-Service Form Modal (Hidden initially) -->
+            <div id="auto-form-modal">
+                <a class="back-link" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> वापस डैशबोर्ड पर जाएं</a>
+                <h3 id="modal-title" style="font-size: 16px; color: #1e293b; margin-bottom: 15px;">Auto Process</h3>
+                <form onsubmit="submitAutoTask(event)">
+                    <div class="form-group">
+                        <label id="input-label-1">कस्टमर नंबर / आईडी</label>
+                        <input type="text" id="field-1" placeholder="डेटा दर्ज करें" required>
+                    </div>
+                    <div class="form-group">
+                        <label>व्हाट्सएप मोबाइल नंबर (अपडेट पाने के लिए)</label>
+                        <input type="tel" id="field-whatsapp" placeholder="10 अंकों का नंबर" pattern="[0-9]{10}" required>
+                    </div>
+                    <button type="submit" class="auto-btn"><i class="fa-solid fa-bolt"></i> 5G स्पीड ऑटो प्रोसेस शुरू करें</button>
+                </form>
             </div>
         </div>
     </div>
 
     <!-- WhatsApp Support Floating Button -->
-    <a href="https://wa.me/917052724014?text=Hello%20Admin,%20mujhe%20portal%20service%20ke%20liye%20baat%20karni%20hai." target="_blank" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i> Whatsapp Support
+    <a href="https://wa.me/917052724014?text=Hello%20Admin,%20Auto%20Service%20portal%20se%20baat%20karni%20hai." target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i> Support
     </a>
 
     <script>
-        function openService(serviceName) {
-            const adminNumber = "917052724014";
-            const message = `Hello Admin, mujhe "${serviceName}" ka kaam karwana hai. Details bhej raha hu.`;
-            const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
+        let currentService = '';
+
+        function openAutoService(serviceName) {
+            currentService = serviceName;
+            document.getElementById('service-grid-box').style.display = 'none';
+            document.getElementById('auto-form-modal').style.display = 'block';
+            document.getElementById('modal-title').innerText = `⚡ Auto Process: ${serviceName}`;
+            
+            if(serviceName.includes('गाड़ी')) {
+                document.getElementById('input-label-1').innerText = 'गाड़ी नंबर (Vehicle Number / RC)';
+            } else if(serviceName.includes('वोटर')) {
+                document.getElementById('input-label-1').innerText = 'एपिक नंबर (EPIC Number)';
+            } else {
+                document.getElementById('input-label-1').innerText = 'आवश्यक आईडी नंबर (Number / ID)';
+            }
         }
 
-        function handleLogout() {
-            if(confirm('क्या आप लॉग आउट करना चाहते हैं?')) {
-                alert('सफलतापूर्वक लॉग आउट हो गए!');
-            }
+        function showHome() {
+            document.getElementById('auto-form-modal').style.display = 'none';
+            document.getElementById('service-grid-box').style.display = 'grid';
+        }
+
+        function submitAutoTask(event) {
+            event.preventDefault();
+            const val1 = document.getElementById('field-1').value;
+            const whatsapp = document.getElementById('field-whatsapp').value;
+
+            // WhatsApp पर ऑटोमैटिक मैसेज भेजने का कोड (ऑटोमेशन सिम्युलेशन)
+            const adminNumber = "917052724014";
+            const message = `⚡ [AUTO SERVICE REQUEST]\nService: ${currentService}\nDetails: ${val1}\nCustomer WhatsApp: ${whatsapp}`;
+            
+            alert('डेटा सफलतापूर्वक ऑटो-प्रकोसिंग कतार में चला गया है! अब व्हाट्सएप पर रीडायरेक्ट हो रहा है।');
+            
+            const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+            showHome();
         }
     </script>
 
