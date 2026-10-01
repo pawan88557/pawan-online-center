@@ -34,23 +34,25 @@
         </div>
     </div>
 
-    <!-- Sticky Header -->
+    <!-- Sticky Header with Owner Photo -->
     <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-40 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="bg-gradient-to-tr from-blue-700 to-blue-500 text-white p-3 rounded-xl shadow-md">
-                    <i class="fas fa-landmark text-xl"></i>
+                <!-- Owner Photo Frame in Header -->
+                <div class="relative">
+                    <img src="236086.jpg" alt="पवन कुमार - संचालक" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-amber-500 shadow-md">
+                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full"></span>
                 </div>
                 <div>
-                    <h1 class="text-xl sm:text-2xl font-extrabold text-blue-950 tracking-tight">पवन ऑनलाइन सेंटर</h1>
-                    <p class="text-xs text-blue-600 font-semibold tracking-wide">CSC & SBI CSP DIGITAL SERVICE HUB</p>
+                    <h1 class="text-lg sm:text-2xl font-extrabold text-blue-950 tracking-tight leading-none">पवन ऑनलाइन सेंटर</h1>
+                    <p class="text-[11px] sm:text-xs text-blue-600 font-semibold tracking-wide mt-1">CSC & SBI CSP DIGITAL SERVICE HUB</p>
                 </div>
             </div>
             <div class="flex items-center gap-3">
                 <a href="https://wa.me/917052724014" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white p-2.5 rounded-xl shadow transition sm:hidden">
                     <i class="fab fa-whatsapp text-lg"></i>
                 </a>
-                <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm shadow-md transition duration-200 hidden sm:inline-flex items-center gap-2">
+                <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs sm:text-sm shadow-md transition duration-200 hidden sm:inline-flex items-center gap-2">
                     <i class="fas fa-th-large"></i> सभी सेवाएँ देखें
                 </a>
             </div>
@@ -58,19 +60,27 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 text-white py-20 px-4 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 text-white py-16 sm:py-20 px-4 overflow-hidden">
         <!-- Decorative background glow -->
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
         
         <div class="max-w-7xl mx-auto text-center relative z-10">
-            <span class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 shadow-sm">
-                <i class="fas fa-shield-alt"></i> जाफरगंज का सबसे भरोसेमंद डिजिटल एवं बैंकिंग केंद्र
+            <!-- Owner Avatar Highlight in Hero -->
+            <div class="mb-6 flex justify-center">
+                <div class="p-1 bg-gradient-to-tr from-amber-400 to-amber-200 rounded-full shadow-lg inline-block">
+                    <img src="236086.jpg" alt="पवन कुमार" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-blue-950 shadow-inner">
+                </div>
+            </div>
+
+            <span class="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 shadow-sm">
+                <i class="fas fa-user-shield"></i> संचालक: पवन कुमार (जाफरगंज)
             </span>
+            
             <h2 class="text-3xl sm:text-6xl font-extrabold mt-2 mb-6 leading-tight tracking-tight">
-                सरकारी योजनाएँ, बैंकिंग और सीएससी सेवाएँ <br class="hidden sm:inline"><span class="text-amber-400">एक ही छत के नीचे</span>
+                सरकारी योजनाएं, बैंकिंग और CSC सेवाएं <br class="hidden sm:inline"><span class="text-amber-400">एक ही छत के नीचे</span>
             </h2>
             <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-light">
-                PVC कार्ड होम डिलीवरी, आय-जाति-निवास, खतौनी नकल, गाड़ी का बीमा, LIC प्रीमियम, पैन कार्ड और आधार सेवाओं के लिए आज ही पधारें।
+                PVC कार्ड होम डिलीवरी, आय-जाति-निवास, खतौनी नकल, गाड़ी का बीमा, LIC प्रीमियम, पैन कार्ड और आधार सेवाओं के लिए आज ही संपर्क करें।
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -87,7 +97,7 @@
     <div class="bg-amber-400 text-slate-950 py-3 px-4 shadow-md font-semibold text-xs sm:text-sm flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
         <div class="flex items-center gap-2">
             <i class="fas fa-bullhorn text-blue-950 animate-bounce"></i>
-            <span><strong>सीएससी (CSC)</strong> से संबंधित सभी प्रकार के कार्यों और ऑनलाइन सेवाओं के लिए संपर्क करें!</span>
+            <span><strong>CSC</strong> से संबंधित सभी प्रकार के कार्यों और ऑनलाइन सेवाओं के लिए संपर्क करें!</span>
         </div>
         <a href="https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20सीएससी%20काम%20के%20संबंध%20में%20संपर्क%20करना%20है" target="_blank" class="bg-slate-950 text-amber-400 text-xs px-3.5 py-1.5 rounded-full hover:bg-blue-900 hover:text-white transition shadow-sm font-bold">
             <i class="fab fa-whatsapp mr-1"></i> तुरंत WhatsApp करें
@@ -119,7 +129,7 @@
     <!-- Services Section -->
     <section id="services" class="py-16 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">हमारी प्रमुख सीएससी डिजिटल सेवाएँ</h3>
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">हमारी प्रमुख CSC डिजिटल सेवाएँ</h3>
             <p class="text-slate-600 mt-2 text-sm sm:text-base font-normal">किसी भी सर्विस पर क्लिक करें—ऑफिशियल वेबसाइट खोलें या सीधे WhatsApp पर काम के लिए आर्डर बुक करें</p>
             <div class="w-24 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -127,7 +137,7 @@
         <!-- Grid of Services -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <!-- 1. PVC Card Home Delivery (Featured Highlight) -->
+            <!-- 1. PVC Card Home Delivery -->
             <div onclick="openServiceModal('PVC कार्ड होम डिलीवरी (Home Delivery)', 'अपने पैन कार्ड, आधार या अन्य आईडी कार्ड को हाई-क्वालिटी PVC फॉर्मेट में प्रिंट करवाकर सीधे अपने घर पर मंगवाएं। WhatsApp पर अपना कार्ड और पूरा पता भेजें।', 'https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20PVC%20कार्ड%20घर%20मंगवाने%20के%20लिए%20आर्डर%20देना%20है')" class="bg-gradient-to-br from-amber-50 via-white to-amber-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-amber-400 group transform hover:-translate-y-1 relative overflow-hidden">
                 <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">POPULAR</span>
                 <div class="w-12 h-12 bg-amber-500 text-slate-950 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition shadow-md">
@@ -297,21 +307,22 @@
         </div>
     </div>
 
-    <!-- Contact & Footer Section -->
+    <!-- Contact & Footer Section with Owner Reference -->
     <footer id="contact" class="bg-slate-950 text-white py-16 px-4 mt-20 border-t border-slate-800">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="bg-amber-500 text-slate-950 p-2.5 rounded-xl font-bold">
-                        <i class="fas fa-landmark text-lg"></i>
+                    <img src="236086.jpg" alt="पवन कुमार" class="w-12 h-12 rounded-full object-cover border-2 border-amber-400">
+                    <div>
+                        <h4 class="text-lg font-extrabold text-amber-400">पवन ऑनलाइन सेंटर</h4>
+                        <p class="text-xs text-slate-400">संचालक: पवन कुमार</p>
                     </div>
-                    <h4 class="text-xl font-extrabold text-amber-400">पवन ऑनलाइन सेंटर</h4>
                 </div>
-                <p class="text-slate-400 text-sm leading-relaxed">CSC & SBI CSP डिजिटल जन सेवा केंद्र। जाफरगंज में आपकी हर डिजिटल, बैंकिंग और सीएससी सेवा जरूरत का एकमात्र भरोसेमंद केंद्र।</p>
+                <p class="text-slate-400 text-sm leading-relaxed">CSC & SBI CSP डिजिटल जन सेवा केंद्र। जाफरगंज में आपकी हर डिजिटल, बैंकिंग और CSC सेवा जरूरत का एकमात्र भरोसेमंद केंद्र।</p>
             </div>
             <div>
                 <h4 class="text-lg font-bold text-amber-400 mb-4 border-b border-slate-800 pb-2">सोशल मीडिया & डायरेक्ट चैट</h4>
-                <p class="text-slate-400 text-sm mb-3">सीएससी कार्य हेतु हमसे तुरंत जुड़ने के लिए:</p>
+                <p class="text-slate-400 text-sm mb-3">CSC कार्य हेतु हमसे तुरंत जुड़ने के लिए:</p>
                 <div class="flex flex-col gap-2.5">
                     <a href="https://wa.me/917052724014" target="_blank" class="inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl text-sm font-semibold shadow transition w-fit">
                         <i class="fab fa-whatsapp text-lg"></i> WhatsApp: +91 7052724014
@@ -362,7 +373,7 @@
 
             // Set WhatsApp Inquiry Link
             const waBtn = document.getElementById('modalWhatsAppLink');
-            waBtn.href = `https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20सीएससी%20के%20काम%20'${encodeURIComponent(title)}'%20के%20संबंध%20में%20जानकारी%20चाहिए।`;
+            waBtn.href = `https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20CSC%20के%20काम%20'${encodeURIComponent(title)}'%20के%20संबंध%20में%20जानकारी%20चाहिए।`;
 
             document.getElementById('serviceModal').classList.remove('hidden');
         }
