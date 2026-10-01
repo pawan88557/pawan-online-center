@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Online Center & SBI CSP - जफरगंज, फतेहपुर</title>
+    <title>पवन ऑनलाइन सेंटर & SBI CSP - जफरगंज, फतेहपुर</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -13,14 +13,26 @@
 
     <!-- Top Bar -->
     <div class="bg-blue-900 text-white text-xs sm:text-sm py-2 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
-            <div><i class="fas fa-map-marker-alt text-amber-400 mr-1"></i> जफरगंज, फतेहपुर, उत्तर प्रदेश</div>
-            <div><i class="fas fa-phone-alt text-amber-400 mr-1"></i> संपर्क करें: +91 7052724014</div>
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap">
+                <span><i class="fas fa-map-marker-alt text-amber-400 mr-1"></i> जफरगंज, फतेहपुर, उत्तर प्रदेश</span>
+                <span><a href="tel:7052724014" class="hover:underline"><i class="fas fa-phone-alt text-amber-400 mr-1"></i> +91 7052724014</a></span>
+            </div>
+            <div class="flex items-center gap-3 flex-wrap">
+                <!-- WhatsApp Top Button -->
+                <a href="https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20ऑनलाइन%20सेवाओं%20के%20संबंध%20में%20जानकारी%20चाहिए।" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1 rounded-md text-xs font-medium transition flex items-center gap-1">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <!-- Instagram Top Button -->
+                <a href="https://instagram.com/csp__jafarganj" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white px-2.5 py-1 rounded-md text-xs font-medium transition flex items-center gap-1">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
         </div>
     </div>
 
     <!-- Header / Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="bg-blue-600 text-white p-2.5 rounded-lg shadow">
@@ -28,27 +40,32 @@
                 </div>
                 <div>
                     <h1 class="text-xl sm:text-2xl font-bold text-blue-900 leading-tight">पवन ऑनलाइन सेंटर</h1>
-                    <p class="text-xs text-slate-500 font-medium">SBI Customer Service Point (CSP) & Digital Services</p>
+                    <p class="text-xs text-slate-500 font-medium">SBI CSP & Digital Services Hub</p>
                 </div>
             </div>
-            <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded-lg text-sm shadow transition duration-200 hidden sm:inline-block">
-                <i class="fas fa-headset mr-1"></i> संपर्क करें
-            </a>
+            <div class="flex items-center gap-2">
+                <a href="https://wa.me/917052724014" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white p-2.5 rounded-lg shadow transition sm:hidden">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded-lg text-sm shadow transition duration-200 hidden sm:inline-block">
+                    <i class="fas fa-headset mr-1"></i> संपर्क करें
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16 px-4">
         <div class="max-w-7xl mx-auto text-center">
-            <span class="bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Trusted Digital & Banking Hub</span>
-            <h2 class="text-3xl sm:text-5xl font-extrabold mt-4 mb-4 leading-tight">आपके सभी डिजिटल और बैंकिंग समाधान <br class="hidden sm:inline">एक ही छत के नीचे</h2>
-            <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-8">आधार बैंकिंग, मनी ट्रांसफर, ऑनलाइन फॉर्म, पैन कार्ड, PVC कार्ड प्रिंटिंग और सभी प्रकार की डिजिटल सेवाओं के लिए आज ही पधारें।</p>
+            <span class="bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Trusted Digital & Banking Services</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mt-4 mb-4 leading-tight">सभी डिजिटल, बैंकिंग और सरकारी फॉर्म <br class="hidden sm:inline">एक ही छत के नीचे</h2>
+            <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-8">आय-जाति-निवास, खतौनी नकल, पैन कार्ड, आधार सेवाएं, मनी ट्रांसफर और बिजली बिल भुगतान के लिए आज ही पधारें।</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-3 rounded-xl shadow-lg transition duration-200">
-                    <i class="fas fa-concierge-bell mr-2"></i> सेवाएँ देखें
+                    <i class="fas fa-th-large mr-2"></i> सभी सेवाएँ देखें
                 </a>
-                <a href="#contact" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-6 py-3 rounded-xl backdrop-blur-sm transition duration-200">
-                    <i class="fas fa-map-marker-alt mr-2"></i> हमारा पता
+                <a href="https://wa.me/917052724014?text=नमस्ते%20जी" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition duration-200 flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-xl"></i> WhatsApp चैट करें
                 </a>
             </div>
         </div>
@@ -57,104 +74,159 @@
     <!-- Services Section -->
     <section id="services" class="py-16 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">हमारी प्रमुख सेवाएँ</h3>
-            <p class="text-slate-600 mt-2 text-sm sm:text-base">Fast, Reliable & Secure Services</p>
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">हमारी सभी सेवाएँ</h3>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">किसी भी सेवा पर क्लिक करके अधिक जानकारी प्राप्त करें</p>
             <div class="w-20 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Service 1: SBI CSP Banking -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fas fa-university"></i>
+        <!-- Grid of Services -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- 1. आय, जाति, निवास -->
+            <div onclick="openServiceModal('आय, जाति और निवास प्रमाण पत्र', 'इस सेवा के तहत नया आय, जाति या निवास प्रमाण पत्र तुरंत ऑनलाइन आवेदन किया जाता है। आवश्यक दस्तावेज: आधार कार्ड, फोटो और स्वप्रमाणित घोषणा पत्र।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fas fa-id-badge"></i>
                 </div>
-                <h4 class="text-lg font-bold text-slate-800 mb-2">SBI CSP बैंकिंग सेवा</h4>
-                <p class="text-slate-600 text-sm">आधार कार्ड से पैसे निकालना, जमा करना, बैंक खाता खोलना और मिनी स्टेटमेंट निकालना।</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">आय, जाति, निवास</h4>
+                <p class="text-slate-600 text-sm">प्रमाण पत्र ऑनलाइन आवेदन और त्वरित डाउनलोड सुविधा।</p>
+                <span class="inline-block mt-3 text-blue-600 text-xs font-semibold">क्लिक करें &rarr;</span>
             </div>
 
-            <!-- Service 2: Digital Forms & ID -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
-                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fas fa-id-card"></i>
+            <!-- 2. राशन कार्ड -->
+            <div onclick="openServiceModal('राशन कार्ड सेवा', 'नया राशन कार्ड बनवाने, नाम जोड़ने/हटाने या संशोधन (Correction) के लिए संपर्क करें।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                    <i class="fas fa-utensils"></i>
                 </div>
-                <h4 class="text-lg font-bold text-slate-800 mb-2">पैन & आधार सेवाएँ</h4>
-                <p class="text-slate-600 text-sm">नया पैन कार्ड आवेदन, करेक्शन, आयुष्मान कार्ड और विभिन्न सरकारी ऑनलाइन फॉर्म भरना।</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">राशन कार्ड</h4>
+                <p class="text-slate-600 text-sm">नया राशन कार्ड आवेदन और यूनिट संशोधन कार्य।</p>
+                <span class="inline-block mt-3 text-amber-600 text-xs font-semibold">क्लिक करें &rarr;</span>
             </div>
 
-            <!-- Service 3: PVC Card Printing -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <!-- 3. पैन कार्ड -->
+            <div onclick="openServiceModal('पैन कार्ड (PAN Card)', 'नया पैन कार्ड (फिजिकल और ई-पैन) तथा पैन कार्ड में सुधार (नाम, जन्मतिथि, फोटो सुधार) की सुविधा।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">पैन कार्ड</h4>
+                <p class="text-slate-600 text-sm">नया पैन कार्ड और सुधार कार्य त्वरित गति से।</p>
+                <span class="inline-block mt-3 text-emerald-600 text-xs font-semibold">क्लिक करें &rarr;</span>
+            </div>
+
+            <!-- 4. आधार कार्ड सेवा एवं प्रिंट -->
+            <div onclick="openServiceModal('आधार कार्ड सेवा एवं प्रिंट', 'आधार कार्ड प्रिंटिंग, PVC आधार कार्ड बनवाने, और आधार संबंधित सभी डिजिटल प्रिंट कार्यों की सुविधा।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">आधार कार्ड सेवा & प्रिंट</h4>
+                <p class="text-slate-600 text-sm">आधार प्रिंट, PVC कार्ड और आवश्यक दस्तावेज़ प्रिंटिंग।</p>
+                <span class="inline-block mt-3 text-indigo-600 text-xs font-semibold">क्लिक करें &rarr;</span>
+            </div>
+
+            <!-- 5. खतौनी नकल -->
+            <div onclick="openServiceModal('खतौनी नकल (Land Records)', 'अपनी जमीन या खेत की खतौनी नकल ऑनलाइन निकलवाएं। गाटा संख्या या नाम द्वारा खतौनी तुरंत प्राप्त करें।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">खतौनी नकल</h4>
+                <p class="text-slate-600 text-sm">खेत/जमीन की खतौनी नकल ऑनलाइन तुरंत निकलवाएं।</p>
+                <span class="inline-block mt-3 text-teal-600 text-xs font-semibold">क्लिक करें &rarr;</span>
+            </div>
+
+            <!-- 6. मनी ट्रांसफर -->
+            <div onclick="openServiceModal('मनी ट्रांसफर (DMT & Banking)', 'SBI CSP के माध्यम से किसी भी बैंक खाते में सुरक्षित पैसे भेजें (Money Transfer) और नकद निकासी करें।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-rose-600 group-hover:text-white transition">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">मनी ट्रांसफर</h4>
+                <p class="text-slate-600 text-sm">देश के किसी भी बैंक खाते में तुरंत पैसे भेजें और निकालें।</p>
+                <span class="inline-block mt-3 text-rose-600 text-xs font-semibold">क्लिक करें &rarr;</span>
+            </div>
+
+            <!-- 7. बिजली बिल -->
+            <div onclick="openServiceModal('बिजली बिल भुगतान (Electricity Bill)', 'अपने ग्रामीण या शहरी बिजली का बिल चेक करें और आसानी से ऑनलाइन भुगतान करें।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">बिजली बिल</h4>
+                <p class="text-slate-600 text-sm">बिजली बिल देखें और तुरंत जमा करें, रसीद प्राप्त करें।</p>
+                <span class="inline-block mt-3 text-yellow-600 text-xs font-semibold">क्लिक करें &rarr;</span>
+            </div>
+
+            <!-- 8. मोबाइल & DTH रिचार्ज -->
+            <div onclick="openServiceModal('मोबाइल और DTH रिचार्ज (Recharge)', 'सभी कंपनियों (Jio, Airtel, Vi, BSNL) के मोबाइल रिचार्ज और DTH रिचार्ज की सुविधा।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">रिचार्ज</h4>
+                <p class="text-slate-600 text-sm">मोबाइल और DTH रिचार्ज तुरंत करवाएं।</p>
+                <span class="inline-block mt-3 text-purple-600 text-xs font-semibold">क्लिक करें &rarr;</span>
+            </div>
+
+            <!-- 9. PVC कार्ड प्रिंटिंग -->
+            <div onclick="openServiceModal('PVC कार्ड प्रिंटिंग', 'हाई-क्वालिटी डबल-साइड PVC ID कार्ड प्रिंटिंग, कलर/ब्लैक-व्हाइट प्रिंट और फोटोकॉपी।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-cyan-600 group-hover:text-white transition">
                     <i class="fas fa-print"></i>
                 </div>
-                <h4 class="text-lg font-bold text-slate-800 mb-2">PVC कार्ड & प्रिंटिंग</h4>
-                <p class="text-slate-600 text-sm">हाई-क्वालिटी डबल-साइड PVC ID कार्ड प्रिंटिंग, कलर/ब्लैक-व्हाइट प्रिंट और फोटोकॉपी।</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">PVC कार्ड प्रिंटिंग</h4>
+                <p class="text-slate-600 text-sm">डबल-साइड PVC ID कार्ड, फोटोकॉपी और प्रिंटिंग।</p>
+                <span class="inline-block mt-3 text-cyan-600 text-xs font-semibold">क्लिक करें &rarr;</span>
             </div>
 
-            <!-- Service 4: Business Registrations -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
-                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fas fa-file-invoice-dollar"></i>
+            <!-- 10. SBI CSP बैंकिंग -->
+            <div onclick="openServiceModal('SBI CSP बैंकिंग सेवा', 'खाता खोलना, आधार कार्ड से पैसे निकालना, जमा करना और मिनी स्टेटमेंट निकालना।')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition cursor-pointer border border-slate-100 group">
+                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fas fa-university"></i>
                 </div>
-                <h4 class="text-lg font-bold text-slate-800 mb-2">उद्योग आधार & बिल</h4>
-                <p class="text-slate-600 text-sm">उद्यम MSME रजिस्ट्रेशन, मनी ट्रांसफर (DMT), बिजली बिल भुगतान और मोबाइल/DTH रिचार्ज।</p>
+                <h4 class="text-lg font-bold text-slate-800 mb-2">SBI CSP बैंकिंग</h4>
+                <p class="text-slate-600 text-sm">आधार आधारित लेनदेन, खाता खोलना और जमा-निकासी।</p>
+                <span class="inline-block mt-3 text-blue-600 text-xs font-semibold">क्लिक करें &rarr;</span>
             </div>
+
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="bg-blue-50 py-16 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-blue-600 font-bold text-sm tracking-wider uppercase">Why Choose Pawan Online Center</span>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-4">भरोसेमंद और तेज़ डिजिटल सेवा अनुभव</h3>
-                <p class="text-slate-600 mb-6">हम अपने ग्राहकों को सबसे तेज और सटीक सेवा प्रदान करने के लिए प्रतिबद्ध हैं। बैंकिंग से लेकर सभी प्रकार के ऑनलाइन कार्यों के लिए हमारा केंद्र जफरगंज का प्रमुख केंद्र है।</p>
-                <ul class="space-y-3">
-                    <li class="flex items-center gap-3 text-slate-700"><i class="fas fa-check-circle text-emerald-600"></i> शत-प्रतिशत सुरक्षित बैंकिंग लेनदेन</li>
-                    <li class="flex items-center gap-3 text-slate-700"><i class="fas fa-check-circle text-emerald-600"></i> त्वरित फॉर्म सबमिशन और रसीद</li>
-                    <li class="flex items-center gap-3 text-slate-700"><i class="fas fa-check-circle text-emerald-600"></i> किफायती और पारदर्शी मूल्य</li>
-                </ul>
+    <!-- Modal Popup for Services -->
+    <div id="serviceModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl transform transition-all">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modalTitle" class="text-xl font-bold text-blue-950"></h3>
+                <button onclick="closeServiceModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200">
-                <h4 class="text-xl font-bold text-slate-800 mb-4 text-center">क्विक सहायता</h4>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl">
-                        <div class="bg-blue-600 text-white p-3 rounded-lg"><i class="fas fa-clock"></i></div>
-                        <div>
-                            <p class="text-xs text-slate-500 font-medium">कार्य का समय</p>
-                            <p class="text-sm font-bold text-slate-800">सोमवार से शनिवार: सुबह 8:00 - शाम 7:00</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl">
-                        <div class="bg-amber-500 text-white p-3 rounded-lg"><i class="fas fa-map-marked-alt"></i></div>
-                        <div>
-                            <p class="text-xs text-slate-500 font-medium">लोकेशन</p>
-                            <p class="text-sm font-bold text-slate-800">जफरगंज, फतेहपुर, उत्तर प्रदेश</p>
-                        </div>
-                    </div>
-                </div>
+            <p id="modalDesc" class="text-slate-600 text-sm mb-6 leading-relaxed"></p>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/917052724014?text=नमस्ते,%20मुझे%20इस%20सेवा%20के%20बारे%20में%20जानकारी%20चाहिए" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-xl text-center text-sm transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp पर पूछें
+                </a>
+                <button onclick="closeServiceModal()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-sm font-medium transition">
+                    बंद करें
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer / Contact Section -->
-    <footer id="contact" class="bg-slate-900 text-white py-12 px-4">
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-slate-900 text-white py-12 px-4 mt-12">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
                 <h4 class="text-lg font-bold text-amber-400 mb-3">पवन ऑनलाइन सेंटर</h4>
-                <p class="text-slate-400 text-sm">SBI CSP & डिजिटल जन सेवा केंद्र। आपकी हर डिजिटल जरूरत का एकमात्र समाधान।</p>
+                <p class="text-slate-400 text-sm">SBI CSP & डिजिटल जन सेवा केंद्र। जफरगंज में आपकी हर डिजिटल जरूरत का भरोसेमंद केंद्र।</p>
             </div>
             <div>
-                <h4 class="text-lg font-bold text-amber-400 mb-3">त्वरित लिंक्स</h4>
-                <ul class="space-y-2 text-sm text-slate-400">
-                    <li><a href="#" class="hover:text-white transition">होम</a></li>
-                    <li><a href="#services" class="hover:text-white transition">सेवाएँ</a></li>
-                    <li><a href="#contact" class="hover:text-white transition">संपर्क</a></li>
-                </ul>
+                <h4 class="text-lg font-bold text-amber-400 mb-3">सोशल मीडिया</h4>
+                <p class="text-slate-400 text-sm mb-3">हमसे जुड़ें:</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/917052724014" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow transition w-fit">
+                        <i class="fab fa-whatsapp text-lg"></i> WhatsApp चैट
+                    </a>
+                    <a href="https://instagram.com/csp__jafarganj" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow hover:opacity-90 transition w-fit">
+                        <i class="fab fa-instagram text-lg"></i> @csp__jafarganj
+                    </a>
+                </div>
             </div>
             <div>
                 <h4 class="text-lg font-bold text-amber-400 mb-3">पता & संपर्क</h4>
                 <p class="text-sm text-slate-400 mb-2"><i class="fas fa-map-marker-alt mr-2 text-amber-400"></i> जफरगंज, फतेहपुर, उत्तर प्रदेश</p>
-                <p class="text-sm text-slate-400"><i class="fas fa-phone-alt mr-2 text-amber-400"></i> +91 XXXXXXXXXX</p>
+                <p class="text-sm text-slate-400"><i class="fas fa-phone-alt mr-2 text-amber-400"></i> <a href="tel:7052724014" class="hover:underline">+91 7052724014</a></p>
             </div>
         </div>
         <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
@@ -162,5 +234,16 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Interactive Modals -->
+    <script>
+        function openServiceModal(title, desc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('serviceModal').classList.remove('hidden');
+        }
+        function closeServiceModal() {
+            document.getElementById('serviceModal').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
