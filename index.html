@@ -80,11 +80,11 @@
                 सरकारी योजनाएं, बैंकिंग और CSC सेवाएं <br class="hidden sm:inline"><span class="text-amber-400">एक ही छत के नीचे</span>
             </h2>
             <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-light">
-                आईटीआर फाइलिंग, सोलर पैनल सब्सिडी, लोन, बीमा, अटल पेंशन योजना और सभी प्रकार की डिजिटल सेवाओं के लिए आज ही संपर्क करें।
+                सोलर पैनल सब्सिडी (₹1.08 लाख), आईटीआर फाइलिंग, लोन, बीमा और सभी प्रकार की डिजिटल सेवाओं के लिए आज ही संपर्क करें।
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-2">
-                    <i class="fas fa-concierge-bell"></i> सेवाएँ चुनें और लिंक खोलें
+                    <i class="fas fa-concierge-bell"></i> सेवाएँ चुनें और आवेदन करें
                 </a>
                 <a href="https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20सीएससी%20के%20काम%20के%20लिए%20संपर्क%20करना%20है" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-2 border border-emerald-500">
                     <i class="fab fa-whatsapp text-xl"></i> सीएससी कार्य हेतु WhatsApp संपर्क करें
@@ -97,10 +97,10 @@
     <div class="bg-amber-400 text-slate-950 py-3 px-4 shadow-md font-semibold text-xs sm:text-sm flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
         <div class="flex items-center gap-2">
             <i class="fas fa-bullhorn text-blue-950 animate-bounce"></i>
-            <span><strong>CSC</strong> से संबंधित सभी प्रकार के कार्यों, आईटीआर, लोन और सोलर सब्सिडी हेतु संपर्क करें!</span>
+            <span><strong>सोलर पैनल योजना</strong> के तहत ₹1,08,000 सब्सिडी हेतु ऑनलाइन आवेदन शुरू है!</span>
         </div>
-        <a href="https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20सीएससी%20काम%20के%20संबंध%20में%20संपर्क%20करना%20है" target="_blank" class="bg-slate-950 text-amber-400 text-xs px-3.5 py-1.5 rounded-full hover:bg-blue-900 hover:text-white transition shadow-sm font-bold">
-            <i class="fab fa-whatsapp mr-1"></i> तुरंत WhatsApp करें
+        <a href="javascript:void(0);" onclick="openSolarModal()" class="bg-slate-950 text-amber-400 text-xs px-3.5 py-1.5 rounded-full hover:bg-blue-900 hover:text-white transition shadow-sm font-bold">
+            <i class="fas fa-solar-panel mr-1"></i> फॉर्म भरें
         </a>
     </div>
 
@@ -130,15 +130,28 @@
     <section id="services" class="py-16 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12">
             <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">हमारी प्रमुख CSC डिजिटल सेवाएँ</h3>
-            <p class="text-slate-600 mt-2 text-sm sm:text-base font-normal">किसी भी सर्विस पर क्लिक करें—पूर्ण विवरण देखें या सीधे WhatsApp पर आर्डर बुक करें</p>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base font-normal">किसी भी सर्विस पर क्लिक करें—पूर्ण विवरण देखें या सीधे आवेदन फॉर्म भरें</p>
             <div class="w-24 h-1.5 bg-amber-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <!-- Grid of Services -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <!-- 1. ITR Filing (NEW ADDED) -->
-            <div onclick="openServiceModal('आईटीआर फाइलिंग (Income Tax Return - ITR)', '• विवरण: वेतनभोगी (Salaried), व्यापारी, और अन्य स्रोतों से आय वाले नागरिकों के लिए इनकम टैक्स रिटर्न (ITR) फाइलिंग की सुविधा।\n• लाभ: समय पर टैक्स रिटर्न दाखिल करें, टैक्स रिफंड प्राप्त करें और वित्तीय दस्तावेजों को मजबूत बनाएं।\n• आवश्यक कागजात: पैन कार्ड, आधार कार्ड, बैंक स्टेटमेंट, फॉर्म 16 (यदि हो)।', 'https://www.incometax.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+            <!-- 1. Solar Panel with Form (SPECIAL HIGHLIGHT) -->
+            <div onclick="openSolarModal()" class="bg-gradient-to-br from-amber-50 via-white to-orange-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-orange-500 group transform hover:-translate-y-1 relative overflow-hidden">
+                <span class="absolute top-3 right-3 bg-orange-500 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">₹1.08L SUBSIDY</span>
+                <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition shadow-md">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">सोलर पैनल योजना (फॉर्म भरें)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">लाइट बिल, आधार, पैन और फोटो अपलोड करके आवेदन करें।</p>
+                <div class="mt-4 flex items-center text-orange-700 text-xs font-bold gap-1">
+                    <span>फॉर्म खोलें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
+
+            <!-- 2. ITR Filing -->
+            <div onclick="openServiceModal('आईटीआर फाइलिंग (Income Tax Return - ITR)', '• विवरण: वेतनभोगी, व्यापारी, और अन्य स्रोतों से आय वाले नागरिकों के लिए इनकम टैक्स रिटर्न (ITR) फाइलिंग की सुविधा।\n• आवश्यक कागजात: पैन कार्ड, आधार कार्ड, बैंक स्टेटमेंट, फॉर्म 16।', 'https://www.incometax.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
                 <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-sky-600 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-file-invoice-dollar"></i>
                 </div>
@@ -149,21 +162,8 @@
                 </div>
             </div>
 
-            <!-- 2. Solar Panel with Subsidy (NEW ADDED) -->
-            <div onclick="openServiceModal('सोलर पैनल योजना एवं सब्सिडी (Solar Panel & Subsidy)', '• विवरण: प्रधानमंत्री सूर्य घर मुफ्त बिजली योजना के तहत घरों पर सोलर पैनल लगवाने की सुविधा।\n• सब्सिडी लाभ: सरकार द्वारा सोलर प्लांट स्थापित करने पर ₹1,08,000 तक की बंपर सब्सिडी प्रदान की जाती है।\n• लाभ: बिजली के भारी-भरकम बिल से मुक्ति और पर्यावरण के अनुकूल हरित ऊर्जा।', 'https://pmsuryaghar.gov.in/')" class="bg-gradient-to-br from-amber-50 via-white to-orange-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-orange-400 group transform hover:-translate-y-1 relative overflow-hidden">
-                <span class="absolute top-3 right-3 bg-orange-500 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">₹1.08L SUBSIDY</span>
-                <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition shadow-md">
-                    <i class="fas fa-solar-panel"></i>
-                </div>
-                <h4 class="text-lg font-bold text-slate-900 mb-1">सोलर पैनल & सब्सिडी</h4>
-                <p class="text-slate-600 text-xs sm:text-sm">सोलर पैनल लगवाएं और ₹1,08,000 तक की सब्सिडी का लाभ उठाएं।</p>
-                <div class="mt-4 flex items-center text-orange-700 text-xs font-bold gap-1">
-                    <span>योजना जानें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
-                </div>
-            </div>
-
-            <!-- 3. All Types of Loans (NEW ADDED) -->
-            <div onclick="openServiceModal('सभी प्रकार के लोन (Vehicle, Personal & Business Loan)', '• विवरण: गाड़ी लोन (Vehicle/Car/Bike Loan), पर्सनल लोन, होम लोन, और बिजनेस लोन के लिए आसान आवेदन प्रक्रिया।\n• विशेषताएं: न्यूनतम कागजी कार्रवाई, कम ब्याज दरें और त्वरित लोन अनुमोदन (Loan Approval) में सहायता।\n• संपर्क: अपने सपनों को पूरा करने के लिए आज ही सेंटर पर आएं या WhatsApp पर संपर्क करें।', 'https://www.sbi.co.in/web/personal-banking/loans')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+            <!-- 3. All Types of Loans -->
+            <div onclick="openServiceModal('सभी प्रकार के लोन (Vehicle, Personal & Business Loan)', '• विवरण: गाड़ी लोन (Vehicle/Car/Bike Loan), पर्सनल लोन, होम लोन, और बिजनेस लोन के लिए आसान आवेदन प्रक्रिया।\n• विशेषताएं: न्यूनतम कागजी कार्रवाई और त्वरित लोन अनुमोदन।', 'https://www.sbi.co.in/web/personal-banking/loans')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-hand-holding-usd"></i>
                 </div>
@@ -174,8 +174,8 @@
                 </div>
             </div>
 
-            <!-- 4. Life Insurance: LIC, IndiaFirst, SBI Life (NEW ADDED) -->
-            <div onclick="openServiceModal('बीमा सेवाएँ (LIC, SBI Life & IndiaFirst Insurance)', '• विवरण: सुरक्षित भविष्य और परिवार की आर्थिक सुरक्षा के लिए जीवन बीमा पॉलिसियां।\n• उपलब्ध ब्रांड्स: LIC (भारतीय जीवन बीमा निगम), SBI Life Insurance और IndiaFirst Life Insurance।\n• लाभ: टर्म इंश्योरेंस, बचत योजनाएं, और निवेश के साथ बेहतरीन रिटर्न व टैक्स लाभ।', 'https://www.sbilife.co.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+            <!-- 4. Life Insurance -->
+            <div onclick="openServiceModal('बीमा सेवाएँ (LIC, SBI Life & IndiaFirst Insurance)', '• विवरण: सुरक्षित भविष्य और परिवार की आर्थिक सुरक्षा के लिए जीवन बीमा पॉलिसियां।\n• उपलब्ध ब्रांड्स: LIC, SBI Life Insurance और IndiaFirst Life Insurance।', 'https://www.sbilife.co.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
                 <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-rose-600 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-heartbeat"></i>
                 </div>
@@ -187,7 +187,7 @@
             </div>
 
             <!-- 5. Atal Pension Yojana -->
-            <div onclick="openServiceModal('अटल पेंशन योजना (Atal Pension Yojana - APY)', '• पात्रता: 18 से 40 वर्ष की आयु के सभी बैंक खाताधारक नागरिक।\n• पेंशन लाभ: 60 वर्ष की आयु के बाद जीवनभर प्रति माह ₹1,000 से ₹5,000 तक की गारंटीड पेंशन।\n• विशेष लाभ: सब्सक्राइबर की मृत्यु के बाद पति/पत्नी को पेंशन मिलती है, और दोनों की मृत्यु पर नॉमिनी को पूरा कॉर्पस वापस मिलता है।', 'https://www.npscra.nsdl.co.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+            <div onclick="openServiceModal('अटल पेंशन योजना (Atal Pension Yojana - APY)', '• पात्रता: 18 से 40 वर्ष की आयु के सभी बैंक खाताधारक नागरिक।\n• पेंशन लाभ: 60 वर्ष की आयु के बाद जीवनभर प्रति माह ₹1,000 से ₹5,000 तक की गारंटीड पेंशन।', 'https://www.npscra.nsdl.co.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
                 <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-piggy-bank"></i>
                 </div>
@@ -199,20 +199,19 @@
             </div>
 
             <!-- 6. PVC Card Home Delivery -->
-            <div onclick="openServiceModal('PVC कार्ड होम डिलीवरी (Home Delivery)', 'अपने पैन कार्ड, आधार या अन्य आईडी कार्ड को हाई-क्वालिटी PVC फॉर्मेट में प्रिंट करवाकर सीधे अपने घर पर मंगवाएं। WhatsApp पर अपना कार्ड और पूरा पता भेजें।', 'https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20PVC%20कार्ड%20घर%20मंगवाने%20के%20लिए%20आर्डर%20देना%20है')" class="bg-gradient-to-br from-amber-50 via-white to-amber-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-amber-400 group transform hover:-translate-y-1 relative overflow-hidden">
-                <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">POPULAR</span>
-                <div class="w-12 h-12 bg-amber-500 text-slate-950 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition shadow-md">
+            <div onclick="openServiceModal('PVC कार्ड होम डिलीवरी (Home Delivery)', 'अपने पैन कार्ड, आधार या अन्य आईडी कार्ड को हाई-क्वालिटी PVC फॉर्मेट में प्रिंट करवाकर सीधे अपने घर पर मंगवाएं।', 'https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20PVC%20कार्ड%20घर%20मंगवाने%20के%20लिए%20आर्डर%20देना%20है')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+                <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-id-card-alt"></i>
                 </div>
                 <h4 class="text-lg font-bold text-slate-900 mb-1">PVC कार्ड होम डिलीवरी</h4>
                 <p class="text-slate-600 text-xs sm:text-sm">पैन कार्ड और आईडी कार्ड आर्डर करके सीधे घर मंगाएं।</p>
-                <div class="mt-4 flex items-center text-amber-700 text-xs font-bold gap-1">
+                <div class="mt-4 flex items-center text-amber-600 text-xs font-bold gap-1">
                     <span>आर्डर करें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
                 </div>
             </div>
 
             <!-- 7. आय, जाति, निवास -->
-            <div onclick="openServiceModal('आय, जाति और निवास प्रमाण पत्र', 'इस सेवा के तहत नया आय, जाति या निवास प्रमाण पत्र तुरंत ऑनलाइन आवेदन किया जाता है। आवश्यक दस्तावेज: आधार कार्ड और फोटो।', 'https://edistrict.up.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+            <div onclick="openServiceModal('आय, जाति और निवास प्रमाण पत्र', 'नया आय, जाति या निवास प्रमाण पत्र तुरंत ऑनलाइन आवेदन किया जाता है।', 'https://edistrict.up.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
                 <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-id-badge"></i>
                 </div>
@@ -224,7 +223,7 @@
             </div>
 
             <!-- 8. खतौनी नकल -->
-            <div onclick="openServiceModal('खतौनी नकल (Land Records)', 'अपनी जमीन या खेत की खतौनी नकल ऑनलाइन निकलवाएं। गाटा संख्या या नाम द्वारा खतौनी तुरंत प्राप्त करें।', 'https://upbhulekh.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
+            <div onclick="openServiceModal('खतौनी नकल (Land Records)', 'अपनी जमीन या खेत की खतौनी नकल ऑनलाइन निकलवाएं।', 'https://upbhulekh.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
                 <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition shadow-sm">
                     <i class="fas fa-file-alt"></i>
                 </div>
@@ -235,58 +234,73 @@
                 </div>
             </div>
 
-            <!-- 9. गाड़ी का बीमा -->
-            <div onclick="openServiceModal('गाड़ी का बीमा (Vehicle Insurance)', 'दोपहिया (Bike) और चार पहिया (Car/Commercial) वाहनों का नया बीमा और नवीनीकरण करवाएं।', 'https://www.digit.co/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
-                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-orange-500 group-hover:text-white transition shadow-sm">
-                    <i class="fas fa-car-crash"></i>
-                </div>
-                <h4 class="text-lg font-bold text-slate-900 mb-1">गाड़ी का बीमा</h4>
-                <p class="text-slate-600 text-xs sm:text-sm">बाइक और कार का थर्ड पार्टी/कॉम्प्रीहेन्सिवा बीमा तुरंत।</p>
-                <div class="mt-4 flex items-center text-orange-600 text-xs font-bold gap-1">
-                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
-                </div>
-            </div>
-
-            <!-- 10. पैन कार्ड -->
-            <div onclick="openServiceModal('पैन कार्ड (PAN Card)', 'नया पैन कार्ड तथा पैन कार्ड में सुधार (नाम, जन्मतिथि, फोटो सुधार) की सुविधा।', 'https://www.utiitsl.com/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
-                <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
-                    <i class="fas fa-address-card"></i>
-                </div>
-                <h4 class="text-lg font-bold text-slate-900 mb-1">पैन कार्ड</h4>
-                <p class="text-slate-600 text-xs sm:text-sm">नया पैन कार्ड और सुधार कार्य त्वरित गति से।</p>
-                <div class="mt-4 flex items-center text-emerald-600 text-xs font-bold gap-1">
-                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
-                </div>
-            </div>
-
-            <!-- 11. आधार कार्ड सेवा एवं प्रिंट -->
-            <div onclick="openServiceModal('आधार कार्ड सेवा एवं प्रिंट', 'आधार कार्ड प्रिंटिंग, PVC आधार कार्ड बनवाने, और आधार संबंधित कार्य।', 'https://uidai.gov.in/')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
-                <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition shadow-sm">
-                    <i class="fas fa-fingerprint"></i>
-                </div>
-                <h4 class="text-lg font-bold text-slate-900 mb-1">आधार सेवा & प्रिंट</h4>
-                <p class="text-slate-600 text-xs sm:text-sm">आधार प्रिंट, PVC कार्ड और आवश्यक दस्तावेज़ प्रिंटिंग।</p>
-                <div class="mt-4 flex items-center text-indigo-600 text-xs font-bold gap-1">
-                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
-                </div>
-            </div>
-
-            <!-- 12. SBI CSP बैंकिंग -->
-            <div onclick="openServiceModal('SBI CSP बैंकिंग सेवा', 'खाता खोलना, आधार कार्ड से पैसे निकालना, जमा करना और मिनी स्टेटमेंट निकालना।', 'https://sbi.co.in/web/personal-banking/home')" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-200/80 group transform hover:-translate-y-1">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition shadow-sm">
-                    <i class="fas fa-university"></i>
-                </div>
-                <h4 class="text-lg font-bold text-slate-900 mb-1">SBI CSP बैंकिंग</h4>
-                <p class="text-slate-600 text-xs sm:text-sm">आधार आधारित लेनदेन, खाता खोलना और जमा-निकासी।</p>
-                <div class="mt-4 flex items-center text-blue-600 text-xs font-bold gap-1">
-                    <span>विवरण देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Modal Popup for Services with Official Links -->
+    <!-- Solar Panel Application Form Modal (NEW) -->
+    <div id="solarModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl transform transition-all border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
+                <h3 class="text-xl font-extrabold text-blue-950"><i class="fas fa-solar-panel text-orange-500 mr-2"></i> सोलर पैनल योजना आवेदन फॉर्म</h3>
+                <button onclick="closeSolarModal()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 hover:text-slate-900 font-bold transition">&times;</button>
+            </div>
+            
+            <form id="solarForm" onsubmit="submitSolarForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">पूरा नाम (आधार कार्ड के अनुसार)</label>
+                    <input type="text" id="applicantName" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="अपना पूरा नाम दर्ज करें">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">बिजली बिल / कनेक्शन नंबर (Consumer No.)</label>
+                    <input type="text" id="consumerNo" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="बिजली बिल कनेक्शन नंबर दर्ज करें">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Aadhaar Upload -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">आधार कार्ड अपलोड करें</label>
+                        <input type="file" id="aadhaarFile" accept="image/*,.pdf" onchange="previewFile(this, 'aadhaarPreview')" class="w-full text-xs text-slate-500 file:mr-2 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100">
+                        <div id="aadhaarPreview" class="mt-2 text-xs text-emerald-600 font-medium"></div>
+                    </div>
+
+                    <!-- PAN Upload -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">पैन कार्ड अपलोड करें</label>
+                        <input type="file" id="panFile" accept="image/*,.pdf" onchange="previewFile(this, 'panPreview')" class="w-full text-xs text-slate-500 file:mr-2 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100">
+                        <div id="panPreview" class="mt-2 text-xs text-emerald-600 font-medium"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Bill Upload -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">इलेक्ट्रिक बिल अपलोड करें</label>
+                        <input type="file" id="billFile" accept="image/*,.pdf" onchange="previewFile(this, 'billPreview')" class="w-full text-xs text-slate-500 file:mr-2 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100">
+                        <div id="billPreview" class="mt-2 text-xs text-emerald-600 font-medium"></div>
+                    </div>
+
+                    <!-- Photo Upload -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">पासपोर्ट साइज फोटो अपलोड करें</label>
+                        <input type="file" id="photoFile" accept="image/*" onchange="previewFile(this, 'photoPreview')" class="w-full text-xs text-slate-500 file:mr-2 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100">
+                        <div id="photoPreview" class="mt-2"></div>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <button type="submit" class="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-xl text-sm transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> WhatsApp पर डेटा भेजें
+                    </button>
+                    <a href="https://pmsuryaghar.gov.in/" target="_blank" class="px-4 py-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-xl text-sm font-semibold transition text-center">
+                        ऑफिशियल पोर्टल
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- General Service Modal Popup -->
     <div id="serviceModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl transform transition-all border border-slate-100 max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
@@ -308,7 +322,7 @@
         </div>
     </div>
 
-    <!-- Contact & Footer Section with Owner Reference -->
+    <!-- Contact & Footer Section -->
     <footer id="contact" class="bg-slate-950 text-white py-16 px-4 mt-20 border-t border-slate-800">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             <div>
@@ -337,7 +351,7 @@
                 <h4 class="text-lg font-bold text-amber-400 mb-4 border-b border-slate-800 pb-2">लोकेशन & संपर्क</h4>
                 <p class="text-sm text-slate-300 mb-3 flex items-start gap-2.5">
                     <i class="fas fa-map-marker-alt text-amber-400 mt-1"></i> 
-                    <span>जाफरगंज, फतेहपुर, उत्तर प्रदेश - 212657</span>
+                    <span>जाफरगंज, फतेहपुर, उत्तर प्रदेश - 212601</span>
                 </p>
                 <p class="text-sm text-slate-300 flex items-center gap-2.5">
                     <i class="fas fa-phone-alt text-amber-400"></i> 
@@ -350,29 +364,54 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Interactive Modals with Official Links -->
+    <!-- JavaScript for Modals and Form Previews -->
     <script>
+        function openSolarModal() {
+            document.getElementById('solarModal').classList.remove('hidden');
+        }
+        function closeSolarModal() {
+            document.getElementById('solarModal').classList.add('hidden');
+        }
+
+        function previewFile(input, previewId) {
+            const previewContainer = document.getElementById(previewId);
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                if (previewId === 'photoPreview' && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        previewContainer.innerHTML = `<img src="${e.target.result}" class="w-16 h-16 object-cover rounded-lg border mt-1 shadow-sm">`;
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    previewContainer.innerHTML = `<span class="text-emerald-600 font-semibold"><i class="fas fa-check-circle"></i> फाइल चुनी गई: ${file.name}</span>`;
+                }
+            }
+        }
+
+        function submitSolarForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('applicantName').value;
+            const consumer = document.getElementById('consumerNo').value;
+            
+            const message = `नमस्ते पवन जी,%0Aमैंने सोलर पैनल योजना के लिए फॉर्म भरा है:%0A*नाम:* ${encodeURIComponent(name)}%0A*कनेक्शन नंबर:* ${encodeURIComponent(consumer)}%0A(मैंने अपने कागजात तैयार रखे हैं, कृपया आगे की प्रक्रिया करें।)`;
+            
+            window.open(`https://wa.me/917052724014?text=${message}`, '_blank');
+            closeSolarModal();
+        }
+
         function openServiceModal(title, desc, officialUrl) {
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalDesc').innerText = desc;
             
-            // Set Official Website or WhatsApp Order Link
             const officialBtn = document.getElementById('modalOfficialLink');
-            if(officialUrl && officialUrl.includes('wa.me')) {
+            if(officialUrl) {
                 officialBtn.href = officialUrl;
-                officialBtn.innerHTML = '<i class="fab fa-whatsapp text-lg"></i> WhatsApp पर डायरेक्ट आर्डर बुक करें';
-                officialBtn.className = 'bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl text-center text-sm transition flex items-center justify-center gap-2 shadow-md';
-                officialBtn.style.display = 'flex';
-            } else if(officialUrl) {
-                officialBtn.href = officialUrl;
-                officialBtn.innerHTML = '<i class="fas fa-external-link-alt"></i> ऑफिशियल वेबसाइट पर जाएं';
-                officialBtn.className = 'bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl text-center text-sm transition flex items-center justify-center gap-2 shadow-md';
                 officialBtn.style.display = 'flex';
             } else {
                 officialBtn.style.display = 'none';
             }
 
-            // Set WhatsApp Inquiry Link
             const waBtn = document.getElementById('modalWhatsAppLink');
             waBtn.href = `https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20CSC%20के%20काम%20'${encodeURIComponent(title)}'%20के%20संबंध%20में%20जानकारी%20चाहिए।`;
 
