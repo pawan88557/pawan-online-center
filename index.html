@@ -80,7 +80,7 @@
                 सरकारी योजनाएं, बैंकिंग और CSC सेवाएं <br class="hidden sm:inline"><span class="text-amber-400">एक ही छत के नीचे</span>
             </h2>
             <p class="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-light">
-                PVC कार्ड होम डिलीवरी, आय-जाति-निवास, खतौनी नकल, गाड़ी का बीमा, LIC प्रीमियम, पैन कार्ड और आधार सेवाओं के लिए आज ही संपर्क करें।
+                अटल पेंशन योजना, PVC कार्ड होम डिलीवरी, आय-जाति-निवास, खतौनी नकल, गाड़ी का बीमा, LIC और पैन कार्ड सेवाओं के लिए आज ही संपर्क करें।
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#services" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-2">
@@ -137,6 +137,19 @@
         <!-- Grid of Services -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
+            <!-- 0. Atal Pension Yojana (NEW ADDED) -->
+            <div onclick="openServiceModal('अटल पेंशन योजना (Atal Pension Yojana - APY)', '• पात्रता: 18 से 40 वर्ष की आयु के सभी बैंक खाताधारक नागरिक।\n• पेंशन लाभ: 60 वर्ष की आयु के बाद जीवनभर प्रति माह ₹1,000 से ₹5,000 तक की गारंटीड पेंशन।\n• विशेष लाभ: सब्सक्राइबर की मृत्यु के बाद पति/पत्नी को पेंशन मिलती है, और दोनों की मृत्यु पर नॉमिनी को पूरा कॉर्पस (फंड) वापस मिलता है।\n• अंशदान: उम्र (18 से 40 वर्ष) और चुनी गई पेंशन राशि के अनुसार बहुत ही कम मासिक किस्त (उदाहरण: 18 वर्ष की आयु में ₹5,000 पेंशन के लिए मात्र ₹210 प्रति माह)।', 'https://www.npscra.nsdl.co.in/')" class="bg-gradient-to-br from-indigo-50 via-white to-blue-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-indigo-500 group transform hover:-translate-y-1 relative overflow-hidden">
+                <span class="absolute top-3 right-3 bg-indigo-600 text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">NEW SCHEME</span>
+                <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition shadow-md">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900 mb-1">अटल पेंशन योजना (APY)</h4>
+                <p class="text-slate-600 text-xs sm:text-sm">बुढ़ापे के लिए सुरक्षित पेंशन और परिवार के लिए वित्तीय लाभ।</p>
+                <div class="mt-4 flex items-center text-indigo-700 text-xs font-bold gap-1">
+                    <span>पूरी जानकारी देखें</span> <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+                </div>
+            </div>
+
             <!-- 1. PVC Card Home Delivery -->
             <div onclick="openServiceModal('PVC कार्ड होम डिलीवरी (Home Delivery)', 'अपने पैन कार्ड, आधार या अन्य आईडी कार्ड को हाई-क्वालिटी PVC फॉर्मेट में प्रिंट करवाकर सीधे अपने घर पर मंगवाएं। WhatsApp पर अपना कार्ड और पूरा पता भेजें।', 'https://wa.me/917052724014?text=नमस्ते%20पवन%20जी,%20मुझे%20PVC%20कार्ड%20घर%20मंगवाने%20के%20लिए%20आर्डर%20देना%20है')" class="bg-gradient-to-br from-amber-50 via-white to-amber-100/60 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-amber-400 group transform hover:-translate-y-1 relative overflow-hidden">
                 <span class="absolute top-3 right-3 bg-amber-500 text-slate-950 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full shadow-sm">POPULAR</span>
@@ -287,12 +300,12 @@
 
     <!-- Modal Popup for Services with Official Links -->
     <div id="serviceModal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl transform transition-all border border-slate-100">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl transform transition-all border border-slate-100 max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
                 <h3 id="modalTitle" class="text-xl font-bold text-blue-950"></h3>
                 <button onclick="closeServiceModal()" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-slate-200 hover:text-slate-900 font-bold transition">&times;</button>
             </div>
-            <p id="modalDesc" class="text-slate-600 text-sm mb-6 leading-relaxed"></p>
+            <p id="modalDesc" class="text-slate-600 text-sm mb-6 leading-relaxed whitespace-pre-line"></p>
             <div class="flex flex-col gap-3">
                 <a id="modalOfficialLink" href="#" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl text-center text-sm transition flex items-center justify-center gap-2 shadow-md">
                     <i class="fas fa-external-link-alt"></i> ऑफिशियल वेबसाइट पर जाएं
